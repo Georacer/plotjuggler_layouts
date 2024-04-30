@@ -8,7 +8,7 @@
       <DockSplitter orientation="-" count="2" sizes="0.666667;0.333333">
        <DockArea name="Local position">
         <plot style="Lines" mode="XYPlot" flip_x="false" flip_y="false">
-         <range bottom="-9.350861" top="142.055943" left="-155.264196" right="212.013021"/>
+         <range bottom="-73.995885" top="206.700968" left="-155.264196" right="212.013021"/>
          <limitY/>
          <curve curve_y="/XKF1/#0/PN&#x9;[m]" color="#1f77b4" name="/XKF1/#0/P[E&#x9;[m];N&#x9;[m]]" curve_x="/XKF1/#0/PE&#x9;[m]"/>
         </plot>
@@ -1162,7 +1162,7 @@
     </DockSplitter>
    </Container>
   </Tab>
-  <currentTabIndex index="3"/>
+  <currentTabIndex index="0"/>
  </tabbed_widget>
  <use_relative_time_offset enabled="1"/>
  <!-- - - - - - - - - - - - - - - -->
