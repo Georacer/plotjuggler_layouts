@@ -710,6 +710,69 @@
     </DockSplitter>
    </Container>
   </Tab>
+  <Tab containers="1" tab_name="tab2">
+   <Container>
+    <DockSplitter orientation="-" count="3" sizes="0.3337;0.332599;0.3337">
+     <DockSplitter orientation="|" count="2" sizes="0.5;0.5">
+      <DockArea name="...">
+       <plot mode="TimeSeries" flip_y="false" style="Lines" flip_x="false">
+        <range right="433.037416" left="410.880139" top="6.146231" bottom="-7.053351"/>
+        <limitY/>
+        <curve name="/PIQP/Act" color="#1f77b4"/>
+        <curve name="/PIQP/Tar" color="#d62728"/>
+       </plot>
+      </DockArea>
+      <DockArea name="...">
+       <plot mode="TimeSeries" flip_y="false" style="Lines" flip_x="false">
+        <range right="433.037416" left="410.880139" top="0.534345" bottom="-0.343920"/>
+        <limitY/>
+        <curve name="/PIQP/P" color="#1f77b4"/>
+        <curve name="/PIQP/I" color="#d62728"/>
+        <curve name="/PIQP/D" color="#1ac938"/>
+       </plot>
+      </DockArea>
+     </DockSplitter>
+     <DockSplitter orientation="|" count="2" sizes="0.5;0.5">
+      <DockArea name="...">
+       <plot mode="TimeSeries" flip_y="false" style="Lines" flip_x="false">
+        <range right="433.037416" left="410.880139" top="3.269100" bottom="-3.962756"/>
+        <limitY/>
+        <curve name="/PIQR/Act" color="#1f77b4"/>
+        <curve name="/PIQR/Tar" color="#d62728"/>
+       </plot>
+      </DockArea>
+      <DockArea name="...">
+       <plot mode="TimeSeries" flip_y="false" style="Lines" flip_x="false">
+        <range right="433.037416" left="410.880139" top="0.735522" bottom="-0.506004"/>
+        <limitY/>
+        <curve name="/PIQR/P" color="#1f77b4"/>
+        <curve name="/PIQR/I" color="#d62728"/>
+        <curve name="/PIQR/D" color="#1ac938"/>
+       </plot>
+      </DockArea>
+     </DockSplitter>
+     <DockSplitter orientation="|" count="2" sizes="0.5;0.5">
+      <DockArea name="...">
+       <plot mode="TimeSeries" flip_y="false" style="Lines" flip_x="false">
+        <range right="433.037416" left="410.880139" top="6.614974" bottom="-3.344235"/>
+        <limitY/>
+        <curve name="/PIQY/Act" color="#1f77b4"/>
+        <curve name="/PIQY/Tar" color="#d62728"/>
+       </plot>
+      </DockArea>
+      <DockArea name="...">
+       <plot mode="TimeSeries" flip_y="false" style="Lines" flip_x="false">
+        <range right="433.037416" left="410.880139" top="8.708341" bottom="-13.698782"/>
+        <limitY/>
+        <curve name="/PIQY/P" color="#1f77b4"/>
+        <curve name="/PIQY/I" color="#d62728"/>
+        <curve name="/PIQY/D" color="#1ac938"/>
+       </plot>
+      </DockArea>
+     </DockSplitter>
+    </DockSplitter>
+   </Container>
+  </Tab>
   <Tab containers="1" tab_name="Attitude Ctrl">
    <Container>
     <DockSplitter orientation="-" count="1" sizes="1">
