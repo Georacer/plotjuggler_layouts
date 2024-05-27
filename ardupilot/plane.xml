@@ -998,9 +998,9 @@
         <curve name="/TEC2/KI&#x9;[UNKNOWN]" color="#1ac938"/>
        </plot>
       </DockArea>
+      <DockArea name="Control weights">
        <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
         <range top="1.000000" right="1.000000" bottom="0.000000" left="0.000000"/>
-      <DockArea name="Control weights">
         <limitY/>
         <curve name="/TEC2/KEW&#x9;[UNKNOWN]" color="#1f77b4"/>
         <curve name="/TEC2/PEW&#x9;[UNKNOWN]" color="#d62728"/>
