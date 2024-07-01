@@ -710,7 +710,7 @@
     </DockSplitter>
    </Container>
   </Tab>
-  <Tab containers="1" tab_name="tab2">
+  <Tab containers="1" tab_name="VTOL tuning">
    <Container>
     <DockSplitter orientation="-" count="3" sizes="0.3337;0.332599;0.3337">
      <DockSplitter orientation="|" count="2" sizes="0.5;0.5">
@@ -1007,12 +1007,89 @@
        </plot>
       </DockArea>
       <DockArea name="Flight stage">
-       <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-        <range top="1.100000" right="32.255680" bottom="0.900000" left="22.639274"/>
-        <limitY/>
-        <curve name="/STAT/Stage" color="#1f77b4"/>
-       </plot>
-      </DockArea>
+  <Tab containers="1" tab_name="ICEngine">
+   <Container>
+    <DockSplitter sizes="1" orientation="-" count="1">
+     <DockSplitter sizes="0.5;0.5" orientation="|" count="2">
+      <DockSplitter sizes="0.250276;0.250276;0.249173;0.250276" orientation="-" count="4">
+       <DockArea name="Temperatures">
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="433.728744" right="3423.221823" bottom="-10.578750" left="0.004699"/>
+         <limitY/>
+         <curve color="#1f77b4" name="/EFI/ECT&#x9;[degC]"/>
+         <curve color="#d62728" name="/EFI/IMT&#x9;[degC]"/>
+         <curve color="#1ac938" name="/EFI/OilT&#x9;[degC]"/>
+         <curve color="#ff7f0e" name="/ECYL/#0/CHT&#x9;[degC]"/>
+         <curve color="#f14cc1" name="/ECYL/#0/CHT2&#x9;[degC]"/>
+         <curve color="#9467bd" name="/ECYL/#0/EGT&#x9;[degC]"/>
+        </plot>
+       </DockArea>
+       <DockArea name="Pressures">
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="13.940000" right="3423.221823" bottom="-0.340000" left="0.004699"/>
+         <limitY/>
+         <curve color="#1f77b4" name="/EFI/ATM&#x9;[Pa]"/>
+         <curve color="#d62728" name="/EFI/FP&#x9;[Pa]"/>
+         <curve color="#1ac938" name="/EFI/IMP&#x9;[Pa]"/>
+         <curve color="#ff7f0e" name="/EFI/OilP&#x9;[Pa]"/>
+        </plot>
+       </DockArea>
+       <DockArea name="Engine load">
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="79.950000" right="3423.221823" bottom="-1.950000" left="0.004699"/>
+         <limitY/>
+         <curve color="#1f77b4" name="/EFI/LP&#x9;[%]"/>
+         <curve color="#d62728" name="/EFI/TPS&#x9;[%]"/>
+        </plot>
+       </DockArea>
+       <DockArea name="Engine speed">
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="5854.825000" right="3423.221823" bottom="-143.825000" left="0.004699"/>
+         <limitY/>
+         <curve color="#1f77b4" name="/EFI/Rpm&#x9;[rpm]"/>
+         <curve color="#d62728" name="/RPM/rpm1&#x9;[rpm]"/>
+         <curve color="#1ac938" name="/RPM/rpm2&#x9;[rpm]"/>
+        </plot>
+       </DockArea>
+      </DockSplitter>
+      <DockSplitter sizes="0.250276;0.250276;0.249173;0.250276" orientation="-" count="4">
+       <DockArea name="Fuel consumption rate">
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="3.707083" right="3423.221823" bottom="-0.090417" left="0.004699"/>
+         <limitY/>
+         <curve color="#1f77b4" name="/EFI/FCR"/>
+        </plot>
+       </DockArea>
+       <DockArea name="Overall fuel consumption">
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="113.859755" right="3423.221823" bottom="-2.777067" left="0.004699"/>
+         <limitY/>
+         <curve color="#1f77b4" name="/EFI/CFV"/>
+        </plot>
+       </DockArea>
+       <DockArea name="Status flags">
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="2.050000" right="3423.221823" bottom="-0.050000" left="0.004699"/>
+         <limitY/>
+         <curve color="#1f77b4" name="/EFI2/CSE"/>
+         <curve color="#d62728" name="/EFI2/DS"/>
+         <curve color="#1ac938" name="/EFI2/DebS"/>
+         <curve color="#ff7f0e" name="/EFI2/ES"/>
+         <curve color="#f14cc1" name="/EFI2/FPS"/>
+         <curve color="#9467bd" name="/EFI2/GE"/>
+         <curve color="#17becf" name="/EFI2/MS"/>
+         <curve color="#bcbd22" name="/EFI2/OPS"/>
+         <curve color="#1f77b4" name="/EFI2/SPU"/>
+         <curve color="#d62728" name="/EFI2/TS"/>
+        </plot>
+       </DockArea>
+       <DockArea name="...">
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="0.004074" right="3423.221845" bottom="0.001021" left="0.004742"/>
+         <limitY/>
+        </plot>
+       </DockArea>
+      </DockSplitter>
      </DockSplitter>
     </DockSplitter>
    </Container>
