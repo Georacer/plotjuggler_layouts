@@ -1119,93 +1119,101 @@
   </Tab>
   <Tab containers="1" tab_name="Power">
    <Container>
-    <DockSplitter orientation="-" count="1" sizes="1">
-     <DockSplitter orientation="|" count="3" sizes="0.333115;0.33377;0.333115">
-      <DockSplitter orientation="-" count="4" sizes="0.250276;0.250276;0.249173;0.250276">
+    <DockSplitter sizes="1" orientation="-" count="1">
+     <DockSplitter sizes="0.333115;0.33377;0.333115" orientation="|" count="3">
+      <DockSplitter sizes="0.250276;0.250276;0.249173;0.250276" orientation="-" count="4">
        <DockArea name="Current">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-0.855180" top="35.062387" left="0.499461" right="788.300395"/>
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="0.347631" right="2023.800493" bottom="-0.008479" left="1742.011991"/>
          <limitY/>
          <curve color="#1f77b4" name="/BAT/#0/Curr&#x9;[A]"/>
+         <curve color="#d62728" name="/BAT/#1/Curr&#x9;[A]"/>
         </plot>
        </DockArea>
        <DockArea name="Voltage">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="21.354563" top="24.564422" left="0.499461" right="788.300395"/>
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="13.238802" right="2023.800493" bottom="12.077372" left="1742.011991"/>
          <limitY/>
          <curve color="#1f77b4" name="/BAT/#0/Volt&#x9;[V]"/>
+         <curve color="#d62728" name="/BAT/#1/Volt&#x9;[V]"/>
         </plot>
        </DockArea>
        <DockArea name="Power">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-18.950738" top="776.980272" left="0.499461" right="788.300395"/>
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="4.573318" right="2023.800493" bottom="-0.111544" left="1742.011991"/>
          <limitY/>
          <curve color="#1f77b4" name="power 0 [W]"/>
+         <curve color="#d62728" name="power 1 [W]"/>
         </plot>
        </DockArea>
        <DockArea name="Resting voltage">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-0.606695" top="24.874485" left="0.499461" right="788.300395"/>
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="13.337084" right="2023.800493" bottom="12.076545" left="1742.011991"/>
          <limitY/>
          <curve color="#1f77b4" name="/BAT/#0/VoltR&#x9;[V]"/>
+         <curve color="#d62728" name="/BAT/#1/VoltR&#x9;[V]"/>
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter orientation="-" count="4" sizes="0.250276;0.250276;0.249173;0.250276">
+      <DockSplitter sizes="0.250276;0.250276;0.249173;0.250276" orientation="-" count="4">
        <DockArea name="Remaining %">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="85.650000" top="100.350000" left="0.499461" right="788.300395"/>
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="99.050000" right="2023.800493" bottom="96.950000" left="1742.011991"/>
          <limitY/>
          <curve color="#1f77b4" name="/BAT/#0/RemPct&#x9;[%]"/>
+         <curve color="#d62728" name="/BAT/#1/RemPct&#x9;[%]"/>
         </plot>
        </DockArea>
        <DockArea name="Energy consumed">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-0.251862" top="10.326322" left="0.499461" right="788.300395"/>
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="2.333734" right="2023.800493" bottom="0.002941" left="1742.011991"/>
          <limitY/>
          <curve color="#1f77b4" name="/BAT/#0/EnrgTot&#x9;[W.h]"/>
+         <curve color="#d62728" name="/BAT/#1/EnrgTot&#x9;[W.h]"/>
         </plot>
        </DockArea>
        <DockArea name="Ah consumed">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-0.010974" top="0.449922" left="0.499461" right="788.300395"/>
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="0.179630" right="2023.800493" bottom="0.000556" left="1742.011991"/>
          <limitY/>
          <curve color="#1f77b4" name="/BAT/#0/CurrTot&#x9;[Ah]"/>
+         <curve color="#d62728" name="/BAT/#1/CurrTot&#x9;[Ah]"/>
         </plot>
        </DockArea>
        <DockArea name="Resistance estimate">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-0.467106" top="19.151337" left="0.499461" right="788.300395"/>
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="4.864957" right="2023.800493" bottom="0.202703" left="1742.011991"/>
          <limitY/>
          <curve color="#1f77b4" name="/BAT/#0/Res&#x9;[Ohm]"/>
+         <curve color="#d62728" name="/BAT/#1/Res&#x9;[Ohm]"/>
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter orientation="-" count="4" sizes="0.250276;0.250276;0.249173;0.250276">
+      <DockSplitter sizes="0.250276;0.250276;0.249173;0.250276" orientation="-" count="4">
        <DockArea name="Airspeed">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-0.631754" top="27.934550" left="0.499461" right="788.300395"/>
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="36.651232" right="2023.800493" bottom="29.364471" left="1742.011991"/>
          <limitY/>
          <curve color="#1f77b4" name="/ARSP/#0/Airspeed&#x9;[m s⁻¹]"/>
         </plot>
        </DockArea>
        <DockArea name="Throttle">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-2.250000" top="92.250000" left="0.499461" right="788.300395"/>
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="59.176072" right="2023.800493" bottom="2.873100" left="1742.011991"/>
          <limitY/>
          <curve color="#ff7f0e" name="/AETR/Thr"/>
         </plot>
        </DockArea>
        <DockArea name="Thrust estimate">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-0.769839" top="31.563388" left="0.499461" right="788.300395"/>
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="0.096359" right="2023.800493" bottom="0.026162" left="1742.011991"/>
          <limitY/>
          <curve color="#1f77b4" name="Thrust estimate [N]"/>
         </plot>
        </DockArea>
        <DockArea name="...">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-0.467106" top="19.151337" left="0.398755" right="788.299471"/>
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="19.151337" right="788.299471" bottom="-0.467106" left="0.398755"/>
          <limitY/>
         </plot>
        </DockArea>
