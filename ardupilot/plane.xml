@@ -413,44 +413,44 @@
   </Tab>
   <Tab containers="1" tab_name="Vibration">
    <Container>
-    <DockSplitter orientation="-" count="1" sizes="1">
-     <DockSplitter orientation="|" count="2" sizes="0.5;0.5">
-      <DockSplitter orientation="-" count="2" sizes="0.50055;0.49945">
-       <DockArea name="IMU 0 clipping">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-0.100000" top="0.100000" left="0.499461" right="788.300395"/>
-         <limitY/>
-         <curve color="#1f77b4" name="/VIBE/#0/Clip"/>
-        </plot>
-       </DockArea>
-       <DockArea name="IMU 0 vibrations">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-1.186294" top="48.638034" left="0.499461" right="788.300395"/>
-         <limitY/>
-         <curve color="#1f77b4" name="/VIBE/#0/VibeX&#x9;[m s⁻²]"/>
-         <curve color="#d62728" name="/VIBE/#0/VibeY&#x9;[m s⁻²]"/>
-         <curve color="#1ac938" name="/VIBE/#0/VibeZ&#x9;[m s⁻²]"/>
-        </plot>
-       </DockArea>
-      </DockSplitter>
-      <DockSplitter orientation="-" count="2" sizes="0.50055;0.49945">
-       <DockArea name="IMU 1 clipping">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-0.025000" top="1.025000" left="0.499461" right="788.300395"/>
-         <limitY/>
-         <curve color="#1f77b4" name="/VIBE/#1/Clip"/>
-        </plot>
-       </DockArea>
-       <DockArea name="IMU 1 vibrations">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-0.100000" top="0.100000" left="0.499461" right="788.300395"/>
-         <limitY/>
-         <curve color="#1f77b4" name="/VIBE/#1/VibeX&#x9;[m s⁻²]"/>
-         <curve color="#d62728" name="/VIBE/#1/VibeY&#x9;[m s⁻²]"/>
-         <curve color="#1ac938" name="/VIBE/#1/VibeZ&#x9;[m s⁻²]"/>
-        </plot>
-       </DockArea>
-      </DockSplitter>
+    <DockSplitter sizes="1" orientation="-" count="1">
+     <DockSplitter sizes="0.250276;0.250276;0.249173;0.250276" orientation="-" count="4">
+      <DockArea name="Clipping">
+       <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+        <range top="63.550000" right="3423.221598" bottom="-1.550000" left="0.021157"/>
+        <limitY/>
+        <curve color="#1f77b4" name="/VIBE/#0/Clip"/>
+        <curve color="#d62728" name="/VIBE/#1/Clip"/>
+        <curve color="#1ac938" name="/VIBE/#2/Clip"/>
+       </plot>
+      </DockArea>
+      <DockArea name="Vibrations X">
+       <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+        <range top="22.222273" right="3423.206051" bottom="-0.529080" left="0.003647"/>
+        <limitY/>
+        <curve color="#1f77b4" name="/VIBE/#0/VibeX&#x9;[m s⁻²]"/>
+        <curve color="#d62728" name="/VIBE/#1/VibeX&#x9;[m s⁻²]"/>
+        <curve color="#1ac938" name="/VIBE/#2/VibeX&#x9;[m s⁻²]"/>
+       </plot>
+      </DockArea>
+      <DockArea name="Vibrations Y">
+       <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+        <range top="31.748908" right="3423.206051" bottom="-0.761682" left="0.003647"/>
+        <limitY/>
+        <curve color="#1f77b4" name="/VIBE/#0/VibeY&#x9;[m s⁻²]"/>
+        <curve color="#d62728" name="/VIBE/#1/VibeY&#x9;[m s⁻²]"/>
+        <curve color="#1ac938" name="/VIBE/#2/VibeY&#x9;[m s⁻²]"/>
+       </plot>
+      </DockArea>
+      <DockArea name="Vibrations Z">
+       <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+        <range top="76.894784" right="3423.206051" bottom="-1.865190" left="0.003647"/>
+        <limitY/>
+        <curve color="#1f77b4" name="/VIBE/#0/VibeZ&#x9;[m s⁻²]"/>
+        <curve color="#d62728" name="/VIBE/#1/VibeZ&#x9;[m s⁻²]"/>
+        <curve color="#1ac938" name="/VIBE/#2/VibeZ&#x9;[m s⁻²]"/>
+       </plot>
+      </DockArea>
      </DockSplitter>
     </DockSplitter>
    </Container>
