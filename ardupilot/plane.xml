@@ -1407,7 +1407,74 @@
     </DockSplitter>
    </Container>
   </Tab>
-  <currentTabIndex index="0"/>
+  <Tab containers="1" tab_name="CAN">
+   <Container>
+    <DockSplitter sizes="1" orientation="-" count="1">
+     <DockSplitter sizes="0.5;0.5" orientation="|" count="2">
+      <DockSplitter sizes="0.3337;0.332599;0.3337" orientation="-" count="3">
+       <DockArea name="TX 0">
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="180898.775000" right="3421.821728" bottom="18830.225000" left="1.821544"/>
+         <limitY/>
+         <curve color="#1f77b4" name="/CANS/#0/T"/>
+         <curve color="#d62728" name="/CANS/#0/Trq"/>
+        </plot>
+       </DockArea>
+       <DockArea name="TX 1">
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="184658.750000" right="3421.821728" bottom="18979.250000" left="1.821544"/>
+         <limitY/>
+         <curve color="#1f77b4" name="/CANS/#1/T"/>
+         <curve color="#d62728" name="/CANS/#1/Trq"/>
+        </plot>
+       </DockArea>
+       <DockArea name="...">
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="1.000000" right="1.000000" bottom="0.000000" left="0.000000"/>
+         <limitY/>
+        </plot>
+       </DockArea>
+      </DockSplitter>
+      <DockSplitter sizes="0.3337;0.332599;0.3337" orientation="-" count="3">
+       <DockArea name="RX 0">
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="607719.550000" right="3421.821728" bottom="59176.450000" left="1.821544"/>
+         <limitY/>
+         <curve color="#1f77b4" name="/CANS/#0/R"/>
+        </plot>
+       </DockArea>
+       <DockArea name="RX 1">
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="295259.075000" right="3421.821728" bottom="28387.925000" left="1.821544"/>
+         <limitY/>
+         <curve color="#1f77b4" name="/CANS/#1/R"/>
+        </plot>
+       </DockArea>
+       <DockArea name="Errors">
+        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
+         <range top="0.100000" right="3421.821728" bottom="-0.100000" left="1.821544"/>
+         <limitY/>
+         <curve color="#1f77b4" name="/CANS/#0/Trej"/>
+         <curve color="#d62728" name="/CANS/#0/Tov"/>
+         <curve color="#1ac938" name="/CANS/#0/Tto"/>
+         <curve color="#ff7f0e" name="/CANS/#0/Tab"/>
+         <curve color="#f14cc1" name="/CANS/#0/Rov"/>
+         <curve color="#9467bd" name="/CANS/#0/Rer"/>
+         <curve color="#17becf" name="/CANS/#0/Bo"/>
+         <curve color="#bcbd22" name="/CANS/#1/Trej"/>
+         <curve color="#1f77b4" name="/CANS/#1/Tov"/>
+         <curve color="#d62728" name="/CANS/#1/Tto"/>
+         <curve color="#1ac938" name="/CANS/#1/Tab"/>
+         <curve color="#ff7f0e" name="/CANS/#1/Rov"/>
+         <curve color="#f14cc1" name="/CANS/#1/Rer"/>
+         <curve color="#9467bd" name="/CANS/#1/Bo"/>
+        </plot>
+       </DockArea>
+      </DockSplitter>
+     </DockSplitter>
+    </DockSplitter>
+   </Container>
+  </Tab>
  </tabbed_widget>
  <use_relative_time_offset enabled="1"/>
  <!-- - - - - - - - - - - - - - - -->
