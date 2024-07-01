@@ -1546,6 +1546,14 @@ return v1*n/value</function>
     <v1>/BAT/#0/Volt	[V]</v1>
    </additional_sources>
   </snippet>
+  <snippet name="power 1 [W]">
+   <global></global>
+   <function>return value*v1</function>
+   <linked_source>/BAT/#1/Curr	[A]</linked_source>
+   <additional_sources>
+    <v1>/BAT/#1/Volt	[V]</v1>
+   </additional_sources>
+  </snippet>
   <snippet name="distance from home 0">
    <global></global>
    <function>return math.sqrt(value*value+v1*v1+v2*v2)</function>
