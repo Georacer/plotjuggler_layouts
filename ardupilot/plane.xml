@@ -1007,6 +1007,16 @@
        </plot>
       </DockArea>
       <DockArea name="Flight stage">
+       <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
+        <range top="1.100000" right="32.255680" bottom="0.900000" left="22.639274"/>
+        <limitY/>
+        <curve name="/STAT/Stage" color="#1f77b4"/>
+       </plot>
+      </DockArea>
+     </DockSplitter>
+    </DockSplitter>
+   </Container>
+  </Tab>
   <Tab containers="1" tab_name="ICEngine">
    <Container>
     <DockSplitter sizes="1" orientation="-" count="1">
