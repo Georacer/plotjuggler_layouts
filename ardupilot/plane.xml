@@ -712,63 +712,84 @@
   </Tab>
   <Tab containers="1" tab_name="VTOL tuning">
    <Container>
-    <DockSplitter orientation="-" count="3" sizes="0.3337;0.332599;0.3337">
-     <DockSplitter orientation="|" count="2" sizes="0.5;0.5">
-      <DockArea name="...">
-       <plot mode="TimeSeries" flip_y="false" style="Lines" flip_x="false">
-        <range right="433.037416" left="410.880139" top="6.146231" bottom="-7.053351"/>
+    <DockSplitter count="3" orientation="-" sizes="0.237885;0.274229;0.487885">
+     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+      <DockArea name="Roll rate performance">
+       <plot style="Lines" flip_y="false" flip_x="false" mode="TimeSeries">
+        <range bottom="-0.693553" right="121.466928" top="0.701465" left="12.118237"/>
         <limitY/>
-        <curve name="/PIQP/Act" color="#1f77b4"/>
-        <curve name="/PIQP/Tar" color="#d62728"/>
+        <curve color="#1f77b4" name="/PIQP/Act"/>
+        <curve color="#d62728" name="/PIQP/Tar"/>
        </plot>
       </DockArea>
-      <DockArea name="...">
-       <plot mode="TimeSeries" flip_y="false" style="Lines" flip_x="false">
-        <range right="433.037416" left="410.880139" top="0.534345" bottom="-0.343920"/>
+      <DockArea name="Roll PID elements">
+       <plot style="Lines" flip_y="false" flip_x="false" mode="TimeSeries">
+        <range bottom="-0.589951" right="121.466928" top="1.040329" left="12.118237"/>
         <limitY/>
-        <curve name="/PIQP/P" color="#1f77b4"/>
-        <curve name="/PIQP/I" color="#d62728"/>
-        <curve name="/PIQP/D" color="#1ac938"/>
-       </plot>
-      </DockArea>
-     </DockSplitter>
-     <DockSplitter orientation="|" count="2" sizes="0.5;0.5">
-      <DockArea name="...">
-       <plot mode="TimeSeries" flip_y="false" style="Lines" flip_x="false">
-        <range right="433.037416" left="410.880139" top="3.269100" bottom="-3.962756"/>
-        <limitY/>
-        <curve name="/PIQR/Act" color="#1f77b4"/>
-        <curve name="/PIQR/Tar" color="#d62728"/>
-       </plot>
-      </DockArea>
-      <DockArea name="...">
-       <plot mode="TimeSeries" flip_y="false" style="Lines" flip_x="false">
-        <range right="433.037416" left="410.880139" top="0.735522" bottom="-0.506004"/>
-        <limitY/>
-        <curve name="/PIQR/P" color="#1f77b4"/>
-        <curve name="/PIQR/I" color="#d62728"/>
-        <curve name="/PIQR/D" color="#1ac938"/>
+        <curve color="#1f77b4" name="/PIQP/P"/>
+        <curve color="#d62728" name="/PIQP/I"/>
+        <curve color="#1ac938" name="/PIQP/D"/>
        </plot>
       </DockArea>
      </DockSplitter>
-     <DockSplitter orientation="|" count="2" sizes="0.5;0.5">
-      <DockArea name="...">
-       <plot mode="TimeSeries" flip_y="false" style="Lines" flip_x="false">
-        <range right="433.037416" left="410.880139" top="6.614974" bottom="-3.344235"/>
+     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+      <DockArea name="Pitch rate performance">
+       <plot style="Lines" flip_y="false" flip_x="false" mode="TimeSeries">
+        <range bottom="-0.305110" right="121.466928" top="0.317130" left="12.118237"/>
         <limitY/>
-        <curve name="/PIQY/Act" color="#1f77b4"/>
-        <curve name="/PIQY/Tar" color="#d62728"/>
+        <curve color="#1f77b4" name="/PIQR/Act"/>
+        <curve color="#d62728" name="/PIQR/Tar"/>
        </plot>
       </DockArea>
-      <DockArea name="...">
-       <plot mode="TimeSeries" flip_y="false" style="Lines" flip_x="false">
-        <range right="433.037416" left="410.880139" top="8.708341" bottom="-13.698782"/>
+      <DockArea name="Pitch PID elements">
+       <plot style="Lines" flip_y="false" flip_x="false" mode="TimeSeries">
+        <range bottom="-0.320237" right="121.466928" top="0.327258" left="12.118237"/>
         <limitY/>
-        <curve name="/PIQY/P" color="#1f77b4"/>
-        <curve name="/PIQY/I" color="#d62728"/>
-        <curve name="/PIQY/D" color="#1ac938"/>
+        <curve color="#1f77b4" name="/PIQR/P"/>
+        <curve color="#d62728" name="/PIQR/I"/>
+        <curve color="#1ac938" name="/PIQR/D"/>
        </plot>
       </DockArea>
+     </DockSplitter>
+     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+      <DockSplitter count="2" orientation="-" sizes="0.50905;0.49095">
+       <DockArea name="Yaw rate performance">
+        <plot style="Lines" flip_y="false" flip_x="false" mode="TimeSeries">
+         <range bottom="-1.154806" right="121.466928" top="1.084200" left="12.118237"/>
+         <limitY/>
+         <curve color="#1f77b4" name="/PIQY/Act"/>
+         <curve color="#d62728" name="/PIQY/Tar"/>
+        </plot>
+       </DockArea>
+       <DockArea name="Vertical acceleration performance">
+        <plot style="Lines" flip_y="false" flip_x="false" mode="TimeSeries">
+         <range bottom="-202.995905" right="116.500007" top="186.579874" left="45.580266"/>
+         <limitY/>
+         <curve color="#1f77b4" name="/PIQA/Act"/>
+         <curve color="#d62728" name="/PIQA/Tar"/>
+        </plot>
+       </DockArea>
+      </DockSplitter>
+      <DockSplitter count="2" orientation="-" sizes="0.50905;0.49095">
+       <DockArea name="Yaw PID elements">
+        <plot style="Lines" flip_y="false" flip_x="false" mode="TimeSeries">
+         <range bottom="-0.368417" right="121.466928" top="0.424922" left="12.118237"/>
+         <limitY/>
+         <curve color="#1f77b4" name="/PIQY/P"/>
+         <curve color="#d62728" name="/PIQY/I"/>
+         <curve color="#1ac938" name="/PIQY/D"/>
+        </plot>
+       </DockArea>
+       <DockArea name="Vertical acceleration PID elements">
+        <plot style="Lines" flip_y="false" flip_x="false" mode="TimeSeries">
+         <range bottom="-222.034292" right="116.500007" top="28.880951" left="45.580266"/>
+         <limitY/>
+         <curve color="#1f77b4" name="/PIQA/P"/>
+         <curve color="#d62728" name="/PIQA/I"/>
+         <curve color="#1ac938" name="/PIQA/D"/>
+        </plot>
+       </DockArea>
+      </DockSplitter>
      </DockSplitter>
     </DockSplitter>
    </Container>
