@@ -461,8 +461,8 @@
      <DockSplitter orientation="|" count="2" sizes="0.5;0.5">
       <DockSplitter orientation="-" count="2" sizes="0.50055;0.49945">
        <DockArea name="Altitude">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-17.291216" top="666.347088" left="0.499461" right="788.300395"/>
+        <plot mode="TimeSeries" flip_x="false" style="Lines" flip_y="false">
+         <range bottom="-10.074738" left="0.158967" right="110.123194" top="344.061828"/>
          <limitY/>
          <curve color="#1f77b4" name="/AHR2/Alt&#x9;[m]"/>
          <curve color="#d62728" name="/BARO/#0/Alt&#x9;[m]"/>
@@ -472,8 +472,8 @@
         </plot>
        </DockArea>
        <DockArea name="Vertical velocity">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-10.093094" top="9.084106" left="0.499461" right="788.300395"/>
+        <plot mode="TimeSeries" flip_x="false" style="Lines" flip_y="false">
+         <range bottom="-4.419385" left="0.158967" right="110.123194" top="6.265247"/>
          <limitY/>
          <curve color="#1f77b4" name="/XKF1/#0/VD&#x9;[m s⁻¹]"/>
          <curve color="#d62728" name="/XKF1/#1/VD&#x9;[m s⁻¹]"/>
@@ -483,50 +483,43 @@
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter orientation="-" count="3" sizes="0.3337;0.332599;0.3337">
-       <DockArea name="EKF 0 innovations">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-165.951746" top="78.981748" left="0.499461" right="788.300395"/>
+      <DockSplitter orientation="-" count="4" sizes="0.250276;0.250276;0.249173;0.250276">
+       <DockArea name="EKF 0 innovation tests">
+        <plot mode="TimeSeries" flip_x="false" style="Lines" flip_y="false">
+         <range bottom="-6.500000" left="0.002834" right="9108.621859" top="266.500000"/>
          <limitY/>
-         <curve color="#1f77b4" name="/XKF2/#0/IDX&#x9;[m s⁻²]"/>
-         <curve color="#d62728" name="/XKF2/#0/IDY&#x9;[m s⁻²]"/>
-         <curve color="#1ac938" name="/XKF2/#0/IS&#x9;[rad]"/>
-         <curve color="#ff7f0e" name="/XKF3/#0/IMX&#x9;[Gauss]"/>
-         <curve color="#f14cc1" name="/XKF3/#0/IMY&#x9;[Gauss]"/>
-         <curve color="#9467bd" name="/XKF3/#0/IMZ&#x9;[Gauss]"/>
-         <curve color="#17becf" name="/XKF3/#0/IPD&#x9;[m]"/>
-         <curve color="#bcbd22" name="/XKF3/#0/IPE&#x9;[m]"/>
-         <curve color="#1f77b4" name="/XKF3/#0/IPN&#x9;[m]"/>
-         <curve color="#d62728" name="/XKF3/#0/IVD&#x9;[m s⁻¹]"/>
-         <curve color="#1ac938" name="/XKF3/#0/IVE&#x9;[m s⁻¹]"/>
-         <curve color="#ff7f0e" name="/XKF3/#0/IVN&#x9;[m s⁻¹]"/>
-         <curve color="#f14cc1" name="/XKF3/#0/IVT&#x9;[UNKNOWN]"/>
-         <curve color="#9467bd" name="/XKF3/#0/IYAW&#x9;[deg]"/>
+         <curve color="#1f77b4" name="/XKF4/#0/SH"/>
+         <curve color="#d62728" name="/XKF4/#0/SM"/>
+         <curve color="#1ac938" name="/XKF4/#0/SP"/>
+         <curve color="#ff7f0e" name="/XKF4/#0/SV"/>
+         <curve color="#f14cc1" name="/XKF4/#0/SVT"/>
         </plot>
        </DockArea>
-       <DockArea name="EKF 1 innovations">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-160.267996" top="81.567998" left="0.499461" right="788.300395"/>
+       <DockArea name="EKF 1 innovation tests">
+        <plot mode="TimeSeries" flip_x="false" style="Lines" flip_y="false">
+         <range bottom="-2.950000" left="1.082754" right="9108.621859" top="120.950000"/>
          <limitY/>
-         <curve color="#1f77b4" name="/XKF2/#1/IDX&#x9;[m s⁻²]"/>
-         <curve color="#d62728" name="/XKF2/#1/IDY&#x9;[m s⁻²]"/>
-         <curve color="#1ac938" name="/XKF2/#1/IS&#x9;[rad]"/>
-         <curve color="#ff7f0e" name="/XKF3/#1/IMX&#x9;[Gauss]"/>
-         <curve color="#f14cc1" name="/XKF3/#1/IMY&#x9;[Gauss]"/>
-         <curve color="#9467bd" name="/XKF3/#1/IMZ&#x9;[Gauss]"/>
-         <curve color="#17becf" name="/XKF3/#1/IPD&#x9;[m]"/>
-         <curve color="#bcbd22" name="/XKF3/#1/IPE&#x9;[m]"/>
-         <curve color="#1f77b4" name="/XKF3/#1/IPN&#x9;[m]"/>
-         <curve color="#d62728" name="/XKF3/#1/IVD&#x9;[m s⁻¹]"/>
-         <curve color="#1ac938" name="/XKF3/#1/IVE&#x9;[m s⁻¹]"/>
-         <curve color="#ff7f0e" name="/XKF3/#1/IVN&#x9;[m s⁻¹]"/>
-         <curve color="#f14cc1" name="/XKF3/#1/IVT&#x9;[UNKNOWN]"/>
-         <curve color="#9467bd" name="/XKF3/#1/IYAW&#x9;[deg]"/>
+         <curve color="#1f77b4" name="/XKF4/#1/SH"/>
+         <curve color="#d62728" name="/XKF4/#1/SM"/>
+         <curve color="#1ac938" name="/XKF4/#1/SP"/>
+         <curve color="#ff7f0e" name="/XKF4/#1/SV"/>
+         <curve color="#f14cc1" name="/XKF4/#1/SVT"/>
+        </plot>
+       </DockArea>
+       <DockArea name="EKF 3 Innovation tests">
+        <plot mode="TimeSeries" flip_x="false" style="Lines" flip_y="false">
+         <range bottom="-6.475000" left="1.082754" right="9108.621859" top="265.475000"/>
+         <limitY/>
+         <curve color="#1f77b4" name="/XKF4/#2/SH"/>
+         <curve color="#d62728" name="/XKF4/#2/SM"/>
+         <curve color="#1ac938" name="/XKF4/#2/SP"/>
+         <curve color="#ff7f0e" name="/XKF4/#2/SV"/>
+         <curve color="#f14cc1" name="/XKF4/#2/SVT"/>
         </plot>
        </DockArea>
        <DockArea name="Ground distance">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-1.072500" top="43.972499" left="0.499461" right="788.300395"/>
+        <plot mode="TimeSeries" flip_x="false" style="Lines" flip_y="false">
+         <range bottom="-1.461500" left="0.158967" right="110.123194" top="59.921499"/>
          <limitY/>
          <curve color="#1f77b4" name="/XKF5/#0/HAGL&#x9;[m]"/>
          <curve color="#d62728" name="/XKF5/#0/rng&#x9;[UNKNOWN]"/>
