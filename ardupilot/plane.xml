@@ -1186,38 +1186,43 @@
     </DockSplitter>
    </Container>
   </Tab>
-  <Tab containers="1" tab_name="Navigator">
+  <Tab tab_name="Navigator" containers="1">
    <Container>
-    <DockSplitter orientation="-" count="1" sizes="1">
-     <DockSplitter orientation="|" count="2" sizes="0.5;0.5">
-      <DockSplitter orientation="-" count="2" sizes="0.50055;0.49945">
-       <DockArea name="...">
-        <plot style="Lines" mode="XYPlot" flip_x="false" flip_y="false">
-         <range bottom="-1.340990" top="54.980581" left="-116.120855" right="2.832216"/>
+    <DockSplitter sizes="1" count="1" orientation="-">
+     <DockSplitter sizes="0.5;0.5" count="2" orientation="|">
+      <DockSplitter sizes="0.50055;0.49945" count="2" orientation="-">
+       <DockArea name="Waypoint tracking">
+        <plot mode="XYPlot" flip_y="false" flip_x="false" style="Lines">
+         <range bottom="47.536966" top="47.552707" right="18.637119" left="18.607001"/>
          <limitY/>
-         <curve curve_y="/POS/Lat&#x9;[deglatitude]" color="#1f77b4" name="/POS/L[at&#x9;[deglatitude];ng&#x9;[deglongitude]]" curve_x="/POS/Lng&#x9;[deglongitude]"/>
-         <curve curve_y="/NTUN/TLat&#x9;[deglatitude]" color="#d62728" name="/NTUN/TL[at&#x9;[deglatitude];ng&#x9;[deglongitude]]" curve_x="/NTUN/TLng&#x9;[deglongitude]"/>
+         <curve color="#1f77b4" curve_x="/POS/Lng&#x9;[deglongitude]" curve_y="/POS/Lat&#x9;[deglatitude]" name="/POS/L[at&#x9;[deglatitude];ng&#x9;[deglongitude]]"/>
+         <curve color="#d62728" curve_x="/NTUN/TLng&#x9;[deglongitude]" curve_y="/NTUN/TLat&#x9;[deglatitude]" name="/NTUN/TL[at&#x9;[deglatitude];ng&#x9;[deglongitude]]"/>
         </plot>
        </DockArea>
-       <DockArea name="...">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="0.000000" top="1.000000" left="0.000000" right="1.000000"/>
+       <DockArea name="Bearing">
+        <plot mode="TimeSeries" flip_y="false" flip_x="false" style="Lines">
+         <range bottom="-193.489496" top="373.489492" right="9108.623358" left="0.003685"/>
          <limitY/>
+         <curve color="#1f77b4" name="/ATT/Yaw&#x9;[degheading]"/>
+         <curve color="#d62728" name="/NTUN/NavBrg&#x9;[deg]"/>
+         <curve color="#1ac938" name="/NTUN/TBrg&#x9;[deg]"/>
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter orientation="-" count="2" sizes="0.50055;0.49945">
-       <DockArea name="...">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-5.188300" top="212.720282" left="0.499461" right="788.300395"/>
+      <DockSplitter sizes="0.50055;0.49945" count="2" orientation="-">
+       <DockArea name="Distance to next waypoint">
+        <plot mode="TimeSeries" flip_y="false" flip_x="false" style="Lines">
+         <range bottom="-42.370694" top="1737.198453" right="9108.623358" left="0.003685"/>
          <limitY/>
          <curve color="#1f77b4" name="/NTUN/Dist&#x9;[m]"/>
         </plot>
        </DockArea>
-       <DockArea name="...">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="0.000000" top="1.000000" left="0.000000" right="1.000000"/>
+       <DockArea name="Roll angle">
+        <plot mode="TimeSeries" flip_y="false" flip_x="false" style="Lines">
+         <range bottom="-33.341249" top="34.751249" right="9108.623358" left="0.003685"/>
          <limitY/>
+         <curve color="#1f77b4" name="/ATT/Roll&#x9;[deg]"/>
+         <curve color="#d62728" name="/ATT/DesRoll&#x9;[deg]"/>
         </plot>
        </DockArea>
       </DockSplitter>
