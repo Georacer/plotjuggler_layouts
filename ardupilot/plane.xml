@@ -1125,60 +1125,49 @@
     </DockSplitter>
    </Container>
   </Tab>
-  <Tab tab_name="Transition" containers="1">
+  <Tab containers="1" tab_name="Transition">
    <Container>
-    <DockSplitter orientation="-" sizes="1" count="1">
-     <DockSplitter orientation="|" sizes="0.5;0.5" count="2">
-      <DockSplitter orientation="-" sizes="0.25;0.25;0.25;0.25" count="4">
-       <DockArea name="...">
-        <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-         <range top="1.000000" right="1.000000" bottom="0.000000" left="0.000000"/>
+    <DockSplitter orientation="-" count="1" sizes="1">
+     <DockSplitter orientation="|" count="2" sizes="0.5;0.5">
+      <DockSplitter orientation="-" count="2" sizes="0.50055;0.49945">
+       <DockArea name="Airspeed">
+        <plot mode="TimeSeries" flip_x="false" style="Lines" flip_y="false">
+         <range bottom="-0.567758" left="0.158967" right="110.123194" top="23.278089"/>
          <limitY/>
+         <curve color="#1f77b4" name="/ARSP/#0/Airspeed&#x9;[m s⁻¹]"/>
         </plot>
        </DockArea>
-       <DockArea name="...">
-        <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-         <range top="1.000000" right="1.000000" bottom="0.000000" left="0.000000"/>
+       <DockArea name="Altitude">
+        <plot mode="TimeSeries" flip_x="false" style="Lines" flip_y="false">
+         <range bottom="-8.288903" left="0.158967" right="110.123194" top="100.173768"/>
          <limitY/>
-        </plot>
-       </DockArea>
-       <DockArea name="...">
-        <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-         <range top="1.000000" right="1.000000" bottom="0.000000" left="0.000000"/>
-         <limitY/>
-        </plot>
-       </DockArea>
-       <DockArea name="...">
-        <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-         <range top="682.381500" right="32.255680" bottom="582.358490" left="22.639274"/>
-         <limitY/>
-         <curve name="/POS/Alt&#x9;[m]" color="#1f77b4"/>
+         <curve color="#1f77b4" name="/QTUN/Alt&#x9;[m]"/>
+         <curve color="#d62728" name="/QTUN/DAlt&#x9;[m]"/>
+         <curve color="#1ac938" name="/POS/RelOriginAlt&#x9;[m]"/>
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter orientation="-" sizes="0.25;0.25;0.25;0.25" count="4">
-       <DockArea name="...">
-        <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-         <range top="1.000000" right="1.000000" bottom="0.000000" left="0.000000"/>
+      <DockSplitter orientation="-" count="2" sizes="0.50055;0.49945">
+       <DockArea name="Throttle">
+        <plot mode="TimeSeries" flip_x="false" style="Lines" flip_y="false">
+         <range bottom="-0.050966" left="0.158967" right="110.123194" top="0.974414"/>
          <limitY/>
+         <curve color="#1f77b4" name="/QTUN/ThI"/>
+         <curve color="#d62728" name="/QTUN/ThO"/>
+         <curve color="#1ac938" name="/QTUN/TMix"/>
+         <curve color="#ff7f0e" name="/AETR/Thr">
+          <transform alias="/AETR/Thr[Scale/Offset]" name="Scale/Offset">
+           <options time_offset="0.0" value_scale="0.01" value_offset="0.0"/>
+          </transform>
+         </curve>
         </plot>
        </DockArea>
-       <DockArea name="...">
-        <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-         <range top="1.000000" right="1.000000" bottom="0.000000" left="0.000000"/>
+       <DockArea name="Transition state">
+        <plot mode="TimeSeries" flip_x="false" style="Lines" flip_y="false">
+         <range bottom="-0.050000" left="0.158967" right="110.123194" top="2.050000"/>
          <limitY/>
-        </plot>
-       </DockArea>
-       <DockArea name="...">
-        <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-         <range top="1.000000" right="1.000000" bottom="0.000000" left="0.000000"/>
-         <limitY/>
-        </plot>
-       </DockArea>
-       <DockArea name="...">
-        <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-         <range top="1.000000" right="1.000000" bottom="0.000000" left="0.000000"/>
-         <limitY/>
+         <curve color="#1f77b4" name="/QTUN/Trn"/>
+         <curve color="#d62728" name="/QTUN/Ast"/>
         </plot>
        </DockArea>
       </DockSplitter>
