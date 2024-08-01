@@ -626,6 +626,63 @@
     </DockSplitter>
    </Container>
   </Tab>
+  <Tab containers="1" tab_name="Optical Flow">
+   <Container>
+    <DockSplitter count="3" sizes="0.3337;0.332599;0.3337" orientation="-">
+     <DockSplitter count="2" sizes="0.5;0.5" orientation="|">
+      <DockArea name="...">
+       <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
+        <range right="975.554157" bottom="-3.060347" top="3.490356" left="0.000000"/>
+        <limitY/>
+        <curve color="#1f77b4" name="/OF/bodyX&#x9;[m s⁻¹]"/>
+        <curve color="#d62728" name="/OF/flowX&#x9;[rad s⁻¹]"/>
+        <curve color="#1ac938" name="/IMU/#0/GyrX&#x9;[rad s⁻¹]"/>
+       </plot>
+      </DockArea>
+      <DockArea name="...">
+       <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
+        <range right="975.554157" bottom="108.275000" top="222.725000" left="0.000000"/>
+        <limitY/>
+        <curve color="#1f77b4" name="/OF/Qual"/>
+       </plot>
+      </DockArea>
+     </DockSplitter>
+     <DockSplitter count="2" sizes="0.5;0.5" orientation="|">
+      <DockArea name="...">
+       <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
+        <range right="975.554157" bottom="-5.105814" top="4.868334" left="0.000000"/>
+        <limitY/>
+        <curve color="#1f77b4" name="/OF/bodyY&#x9;[m s⁻¹]"/>
+        <curve color="#d62728" name="/OF/flowY&#x9;[rad s⁻¹]"/>
+        <curve color="#1ac938" name="/IMU/#0/GyrY&#x9;[rad s⁻¹]"/>
+       </plot>
+      </DockArea>
+      <DockArea name="...">
+       <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
+        <range right="0.000000" bottom="0.000000" top="0.100000" left="0.051278"/>
+        <limitY/>
+       </plot>
+      </DockArea>
+     </DockSplitter>
+     <DockSplitter count="2" sizes="0.5;0.5" orientation="|">
+      <DockArea name="...">
+       <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
+        <range right="975.554157" bottom="-2.172397" top="27.404204" left="0.000000"/>
+        <limitY/>
+        <curve color="#1f77b4" name="/RFND/#0/Dist&#x9;[m]"/>
+        <curve color="#d62728" name="/POS/RelOriginAlt&#x9;[m]"/>
+       </plot>
+      </DockArea>
+      <DockArea name="...">
+       <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
+        <range right="1.000000" bottom="0.000000" top="1.000000" left="0.000000"/>
+        <limitY/>
+       </plot>
+      </DockArea>
+     </DockSplitter>
+    </DockSplitter>
+   </Container>
+  </Tab>
   <Tab containers="1" tab_name="Rate Ctrl">
    <Container>
     <DockSplitter orientation="-" count="1" sizes="1">
