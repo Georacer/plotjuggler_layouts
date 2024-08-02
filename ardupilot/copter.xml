@@ -678,12 +678,12 @@
   </Tab>
   <Tab containers="1" tab_name="Rate Ctrl">
    <Container>
-    <DockSplitter orientation="-" count="1" sizes="1">
-     <DockSplitter orientation="|" count="2" sizes="0.5;0.5">
-      <DockSplitter orientation="-" count="4" sizes="0.250276;0.250276;0.249173;0.250276">
+    <DockSplitter sizes="1" count="1" orientation="-">
+     <DockSplitter sizes="0.469201;0.530799" count="2" orientation="|">
+      <DockSplitter sizes="0.250276;0.250276;0.249173;0.250276" count="4" orientation="-">
        <DockArea name="Pilot inputs">
         <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="961.400000" top="2036.600000" left="0.499461" right="788.300395"/>
+         <range left="0.049743" top="1510.900000" bottom="969.100000" right="1339.350001"/>
          <limitY/>
          <curve color="#1f77b4" name="/RCIN/C1&#x9;[us]"/>
          <curve color="#d62728" name="/RCIN/C2&#x9;[us]"/>
@@ -693,7 +693,7 @@
        </DockArea>
        <DockArea name="Roll rate performance">
         <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-97.665960" top="101.407125" left="0.499461" right="788.300395"/>
+         <range left="0.049743" top="2.827518" bottom="-5.066959" right="1339.350001"/>
          <limitY/>
          <curve color="#1f77b4" name="/PIDR/Tar"/>
          <curve color="#d62728" name="/PIDR/Act"/>
@@ -701,142 +701,73 @@
        </DockArea>
        <DockArea name="Pitch rate performance">
         <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-90.814239" top="79.044250" left="0.499461" right="788.300395"/>
+         <range left="0.049743" top="2.065000" bottom="-1.383063" right="1339.350001"/>
          <limitY/>
          <curve color="#1f77b4" name="/PIDP/Tar"/>
          <curve color="#d62728" name="/PIDP/Act"/>
         </plot>
        </DockArea>
-       <DockArea name="Roll D-gain reducer">
+       <DockArea name="Yaw rate performance">
         <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="0.148459" top="1.020769" left="0.499461" right="788.300395"/>
+         <range left="0.971805" top="1.134305" bottom="-1.100401" right="1339.349807"/>
          <limitY/>
-         <curve color="#1f77b4" name="/PIDR/Dmod"/>
+         <curve color="#1f77b4" name="/PIDY/Tar"/>
+         <curve color="#d62728" name="/PIDY/Act"/>
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter orientation="-" count="4" sizes="0.250276;0.250276;0.249173;0.250276">
-       <DockArea name="...">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-4725.000000" top="4725.000000" left="0.499461" right="788.300395"/>
-         <limitY/>
-         <curve color="#1f77b4" name="/AETR/Ail"/>
-         <curve color="#d62728" name="/AETR/Elev"/>
-         <curve color="#1ac938" name="/AETR/Thr"/>
-         <curve color="#ff7f0e" name="/AETR/Rudd"/>
-        </plot>
-       </DockArea>
+      <DockSplitter sizes="0.250276;0.250276;0.249173;0.250276" count="4" orientation="-">
+       <DockSplitter sizes="0.500618;0.499382" count="2" orientation="|">
+        <DockArea name="Motor outputs">
+         <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
+          <range left="0.049763" top="1917.950000" bottom="1080.050000" right="1339.350020"/>
+          <limitY/>
+          <curve color="#1f77b4" name="/RCOU/C1&#x9;[us]"/>
+          <curve color="#d62728" name="/RCOU/C2&#x9;[us]"/>
+          <curve color="#1ac938" name="/RCOU/C3&#x9;[us]"/>
+          <curve color="#ff7f0e" name="/RCOU/C4&#x9;[us]"/>
+          <curve color="#f14cc1" name="/RCOU/C5&#x9;[us]"/>
+          <curve color="#9467bd" name="/RCOU/C6&#x9;[us]"/>
+         </plot>
+        </DockArea>
+        <DockArea name="D-gain modifiers">
+         <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
+          <range left="0.971794" top="1.100000" bottom="0.900000" right="1339.349794"/>
+          <limitY/>
+          <curve color="#1f77b4" name="/PIDR/Dmod"/>
+          <curve color="#d62728" name="/PIDP/Dmod"/>
+          <curve color="#1ac938" name="/PIDY/Dmod"/>
+         </plot>
+        </DockArea>
+       </DockSplitter>
        <DockArea name="Roll PID elements">
         <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-35.105981" top="141.807127" left="0.499461" right="788.300395"/>
+         <range left="0.971794" top="0.100000" bottom="-0.100000" right="1339.349794"/>
          <limitY/>
          <curve color="#1f77b4" name="/PIDR/FF"/>
-         <curve color="#d62728" name="/PIDR/DFF"/>
-         <curve color="#1ac938" name="/PIDR/P"/>
-         <curve color="#ff7f0e" name="/PIDR/I"/>
-         <curve color="#f14cc1" name="/PIDR/D"/>
+         <curve color="#d62728" name="/PIDR/P"/>
+         <curve color="#1ac938" name="/PIDR/I"/>
+         <curve color="#ff7f0e" name="/PIDR/D"/>
         </plot>
        </DockArea>
        <DockArea name="Pitch PID elements">
         <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-181.745896" top="324.961808" left="0.499461" right="788.300395"/>
+         <range left="0.971800" top="0.100000" bottom="-0.100000" right="1339.349802"/>
          <limitY/>
-         <curve color="#1f77b4" name="/PIDP/Err"/>
-         <curve color="#d62728" name="/PIDP/DFF"/>
-         <curve color="#1ac938" name="/PIDP/P"/>
-         <curve color="#ff7f0e" name="/PIDP/I"/>
-         <curve color="#f14cc1" name="/PIDP/D"/>
+         <curve color="#1f77b4" name="/PIDP/FF"/>
+         <curve color="#d62728" name="/PIDP/P"/>
+         <curve color="#1ac938" name="/PIDP/I"/>
+         <curve color="#ff7f0e" name="/PIDP/D"/>
         </plot>
        </DockArea>
-       <DockArea name="Pitch D-gain reducer">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="0.046952" top="1.023245" left="0.499461" right="788.300395"/>
-         <limitY/>
-         <curve color="#1f77b4" name="/PIDP/Dmod"/>
-        </plot>
-       </DockArea>
-      </DockSplitter>
-     </DockSplitter>
-    </DockSplitter>
-   </Container>
-  </Tab>
-  <Tab containers="1" tab_name="VTOL tuning">
-   <Container>
-    <DockSplitter count="3" orientation="-" sizes="0.237885;0.274229;0.487885">
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
-      <DockArea name="Roll rate performance">
-       <plot style="Lines" flip_y="false" flip_x="false" mode="TimeSeries">
-        <range bottom="-0.693553" right="121.466928" top="0.701465" left="12.118237"/>
-        <limitY/>
-        <curve color="#1f77b4" name="/PIQP/Act"/>
-        <curve color="#d62728" name="/PIQP/Tar"/>
-       </plot>
-      </DockArea>
-      <DockArea name="Roll PID elements">
-       <plot style="Lines" flip_y="false" flip_x="false" mode="TimeSeries">
-        <range bottom="-0.589951" right="121.466928" top="1.040329" left="12.118237"/>
-        <limitY/>
-        <curve color="#1f77b4" name="/PIQP/P"/>
-        <curve color="#d62728" name="/PIQP/I"/>
-        <curve color="#1ac938" name="/PIQP/D"/>
-       </plot>
-      </DockArea>
-     </DockSplitter>
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
-      <DockArea name="Pitch rate performance">
-       <plot style="Lines" flip_y="false" flip_x="false" mode="TimeSeries">
-        <range bottom="-0.305110" right="121.466928" top="0.317130" left="12.118237"/>
-        <limitY/>
-        <curve color="#1f77b4" name="/PIQR/Act"/>
-        <curve color="#d62728" name="/PIQR/Tar"/>
-       </plot>
-      </DockArea>
-      <DockArea name="Pitch PID elements">
-       <plot style="Lines" flip_y="false" flip_x="false" mode="TimeSeries">
-        <range bottom="-0.320237" right="121.466928" top="0.327258" left="12.118237"/>
-        <limitY/>
-        <curve color="#1f77b4" name="/PIQR/P"/>
-        <curve color="#d62728" name="/PIQR/I"/>
-        <curve color="#1ac938" name="/PIQR/D"/>
-       </plot>
-      </DockArea>
-     </DockSplitter>
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
-      <DockSplitter count="2" orientation="-" sizes="0.50905;0.49095">
-       <DockArea name="Yaw rate performance">
-        <plot style="Lines" flip_y="false" flip_x="false" mode="TimeSeries">
-         <range bottom="-1.154806" right="121.466928" top="1.084200" left="12.118237"/>
-         <limitY/>
-         <curve color="#1f77b4" name="/PIQY/Act"/>
-         <curve color="#d62728" name="/PIQY/Tar"/>
-        </plot>
-       </DockArea>
-       <DockArea name="Vertical acceleration performance">
-        <plot style="Lines" flip_y="false" flip_x="false" mode="TimeSeries">
-         <range bottom="-202.995905" right="116.500007" top="186.579874" left="45.580266"/>
-         <limitY/>
-         <curve color="#1f77b4" name="/PIQA/Act"/>
-         <curve color="#d62728" name="/PIQA/Tar"/>
-        </plot>
-       </DockArea>
-      </DockSplitter>
-      <DockSplitter count="2" orientation="-" sizes="0.50905;0.49095">
        <DockArea name="Yaw PID elements">
-        <plot style="Lines" flip_y="false" flip_x="false" mode="TimeSeries">
-         <range bottom="-0.368417" right="121.466928" top="0.424922" left="12.118237"/>
+        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
+         <range left="0.971805" top="0.100000" bottom="-0.100000" right="1339.349807"/>
          <limitY/>
-         <curve color="#1f77b4" name="/PIQY/P"/>
-         <curve color="#d62728" name="/PIQY/I"/>
-         <curve color="#1ac938" name="/PIQY/D"/>
-        </plot>
-       </DockArea>
-       <DockArea name="Vertical acceleration PID elements">
-        <plot style="Lines" flip_y="false" flip_x="false" mode="TimeSeries">
-         <range bottom="-222.034292" right="116.500007" top="28.880951" left="45.580266"/>
-         <limitY/>
-         <curve color="#1f77b4" name="/PIQA/P"/>
-         <curve color="#d62728" name="/PIQA/I"/>
-         <curve color="#1ac938" name="/PIQA/D"/>
+         <curve color="#1f77b4" name="/PIDY/FF"/>
+         <curve color="#d62728" name="/PIDY/P"/>
+         <curve color="#1ac938" name="/PIDY/I"/>
+         <curve color="#ff7f0e" name="/PIDY/D"/>
         </plot>
        </DockArea>
       </DockSplitter>
