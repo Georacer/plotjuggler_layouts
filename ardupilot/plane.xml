@@ -850,21 +850,21 @@
   </Tab>
   <Tab tab_name="TECS" containers="1">
    <Container>
-    <DockSplitter orientation="-" sizes="1" count="1">
-     <DockSplitter orientation="|" sizes="0.333115;0.33377;0.333115" count="3">
-      <DockSplitter orientation="-" sizes="0.333712;0.332577;0.333712" count="3">
+    <DockSplitter sizes="1" count="1" orientation="-">
+     <DockSplitter sizes="0.333115;0.33377;0.333115" count="3" orientation="|">
+      <DockSplitter sizes="0.3337;0.332599;0.3337" count="3" orientation="-">
        <DockArea name="Airspeed">
-        <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-         <range top="27.590136" right="32.255680" bottom="2.970558" left="22.639274"/>
+        <plot mode="TimeSeries" style="Lines" flip_y="false" flip_x="false">
+         <range bottom="2.969718" right="31.159198" top="27.866545" left="22.659266"/>
          <limitY/>
-         <curve name="/TECS/sp&#x9;[m s⁻¹]" color="#1f77b4"/>
-         <curve name="/TECS/spdem&#x9;[m s⁻¹]" color="#d62728"/>
-         <curve name="/ARSP/#0/Airspeed&#x9;[m s⁻¹]" color="#1ac938"/>
+         <curve color="#1f77b4" name="/TECS/sp&#x9;[m s⁻¹]"/>
+         <curve color="#d62728" name="/TECS/spdem&#x9;[m s⁻¹]"/>
+         <curve color="#1ac938" name="/ARSP/#0/Airspeed&#x9;[m s⁻¹]"/>
         </plot>
        </DockArea>
        <DockArea name="Altitude">
-        <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-         <range top="126.323773" right="32.255680" bottom="-3.458823" left="22.639274"/>
+        <plot mode="TimeSeries" style="Lines" flip_y="false" flip_x="false">
+         <range bottom="-2.611162" right="31.159198" top="102.420758" left="22.659266"/>
          <limitY/>
          <curve name="/TECS/h&#x9;[m]" color="#1f77b4"/>
          <curve name="/TECS/hdem&#x9;[m]" color="#d62728"/>
@@ -873,80 +873,74 @@
         </plot>
        </DockArea>
        <DockArea name="Pitch">
-        <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-         <range top="31.250121" right="32.255680" bottom="-21.250081" left="22.639274"/>
+        <plot mode="TimeSeries" style="Lines" flip_y="false" flip_x="false">
+         <range bottom="-21.375082" right="31.159198" top="36.375140" left="22.659266"/>
          <limitY/>
-         <curve name="/ATT/Pitch&#x9;[deg]" color="#1f77b4"/>
-         <curve name="/TECS/ph" color="#d62728">
-          <transform name="Scale/Offset" alias="/TECS/ph[Scale/Offset]">
-           <options value_offset="0.0" time_offset="0.0" value_scale="57.296"/>
+         <curve color="#1f77b4" name="/ATT/Pitch&#x9;[deg]"/>
+         <curve color="#d62728" name="/TECS/ph">
+          <transform alias="/TECS/ph[Scale/Offset]" name="Scale/Offset">
+           <options value_scale="57.296" time_offset="0.0" value_offset="0.0"/>
           </transform>
          </curve>
-         <curve name="/TECS/pmax" color="#1ac938">
-          <transform name="Scale/Offset" alias="/TECS/pmax[Scale/Offset]">
-           <options value_offset="0.0" time_offset="0.0" value_scale="57.296"/>
+         <curve color="#1ac938" name="/TECS/pmax">
+          <transform alias="/TECS/pmax[Scale/Offset]" name="Scale/Offset">
+           <options value_scale="57.296" time_offset="0.0" value_offset="0.0"/>
           </transform>
          </curve>
-         <curve name="/TECS/pmin" color="#ff7f0e">
-          <transform name="Scale/Offset" alias="/TECS/pmin[Scale/Offset]">
-           <options value_offset="0.0" time_offset="0.0" value_scale="57.296"/>
+         <curve color="#ff7f0e" name="/TECS/pmin">
+          <transform alias="/TECS/pmin[Scale/Offset]" name="Scale/Offset">
+           <options value_scale="57.296" time_offset="0.0" value_offset="0.0"/>
           </transform>
          </curve>
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter orientation="-" sizes="0.333712;0.332577;0.333712" count="3">
+      <DockSplitter sizes="0.3337;0.332599;0.3337" count="3" orientation="-">
        <DockArea name="Speed rate">
-        <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-         <range top="19.329613" right="32.255680" bottom="-3.071895" left="22.639274"/>
+        <plot mode="TimeSeries" style="Lines" flip_y="false" flip_x="false">
+         <range bottom="-8.046274" right="31.159198" top="17.896396" left="22.659266"/>
          <limitY/>
-         <curve name="/TECS/dsp&#x9;[m s⁻¹]" color="#1f77b4"/>
-         <curve name="/TECS/dspdem" color="#d62728"/>
+         <curve color="#1f77b4" name="/TECS/dsp&#x9;[m s⁻¹]"/>
+         <curve color="#d62728" name="/TECS/dspdem"/>
         </plot>
        </DockArea>
        <DockArea name="Climb rate">
-        <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-         <range top="14.016288" right="32.255680" bottom="-0.785494" left="22.639274"/>
+        <plot mode="TimeSeries" style="Lines" flip_y="false" flip_x="false">
+         <range bottom="-0.429804" right="31.159198" top="14.599410" left="22.659266"/>
          <limitY/>
-         <curve name="/TECS/dh&#x9;[m s⁻¹]" color="#1f77b4"/>
-         <curve name="/TECS/dhdem&#x9;[m s⁻¹]" color="#d62728"/>
+         <curve color="#1f77b4" name="/TECS/dh&#x9;[m s⁻¹]"/>
+         <curve color="#d62728" name="/TECS/dhdem&#x9;[m s⁻¹]"/>
         </plot>
        </DockArea>
-       <DockArea name="Throttle">
-        <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-         <range top="1819.999951" right="32.255680" bottom="980.000001" left="22.639274"/>
+       <DockArea name="...">
+        <plot mode="TimeSeries" style="Lines" flip_y="false" flip_x="false">
+         <range bottom="979.212143" right="31.239999" top="1852.302156" left="0.000000"/>
          <limitY/>
-         <curve name="/RCOU/C3&#x9;[us]" color="#1f77b4"/>
-         <curve name="/TECS/th" color="#d62728">
-          <transform name="Scale/Offset" alias="/TECS/th[Scale/Offset]">
-           <options value_offset="1000" time_offset="0.0" value_scale="1000"/>
-          </transform>
-         </curve>
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter orientation="-" sizes="0.333712;0.332577;0.333712" count="3">
-       <DockArea name="Energy error">
-        <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-         <range top="320.620163" right="32.255680" bottom="-458.917038" left="22.639274"/>
+      <DockSplitter sizes="0.3337;0.332599;0.3337" count="3" orientation="-">
+       <DockArea name="Throttle">
+        <plot mode="TimeSeries" style="Lines" flip_y="false" flip_x="false">
+         <range bottom="-0.020788" right="31.159198" top="0.852302" left="22.659266"/>
          <limitY/>
-         <curve name="/TEC3/TEE&#x9;[UNKNOWN]" color="#1f77b4"/>
-         <curve name="/TEC3/Emax&#x9;[UNKNOWN]" color="#d62728"/>
-         <curve name="/TEC3/Emin&#x9;[UNKNOWN]" color="#1ac938"/>
+         <curve color="#1f77b4" name="/TECS/th"/>
+         <curve color="#d62728" name="/TEC2/tmin&#x9;[UNKNOWN]"/>
+         <curve color="#1ac938" name="/TEC2/tmax&#x9;[UNKNOWN]"/>
         </plot>
        </DockArea>
        <DockArea name="Energy rate error">
-        <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-         <range top="146.208078" right="32.255680" bottom="-129.924867" left="22.639274"/>
+        <plot mode="TimeSeries" style="Lines" flip_y="false" flip_x="false">
+         <range bottom="979.775000" right="31.239999" top="1829.225000" left="0.000000"/>
          <limitY/>
-         <curve name="/TEC3/TEDE&#x9;[UNKNOWN]" color="#1f77b4"/>
+         <curve color="#1f77b4" name="/RCOU/C3&#x9;[us]"/>
         </plot>
        </DockArea>
        <DockArea name="flags">
-        <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-         <range top="140.225000" right="32.255680" bottom="4.775000" left="22.639274"/>
+        <plot mode="TimeSeries" style="Lines" flip_y="false" flip_x="false">
+         <range bottom="-3.200000" right="31.159198" top="131.200000" left="22.659266"/>
          <limitY/>
-         <curve name="/TECS/f" color="#1f77b4"/>
+         <curve color="#1f77b4" name="/TECS/f"/>
         </plot>
        </DockArea>
       </DockSplitter>
@@ -956,75 +950,79 @@
   </Tab>
   <Tab tab_name="TECS 2" containers="1">
    <Container>
-    <DockSplitter orientation="-" sizes="0.333712;0.332577;0.333712" count="3">
-     <DockSplitter orientation="|" sizes="0.333115;0.33377;0.333115" count="3">
+    <DockSplitter sizes="0.3337;0.332599;0.3337" count="3" orientation="-">
+     <DockSplitter sizes="0.333115;0.33377;0.333115" count="3" orientation="|">
       <DockArea name="...">
-       <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-        <range top="1.000000" right="1.000000" bottom="0.000000" left="0.000000"/>
+       <plot mode="TimeSeries" style="Lines" flip_y="false" flip_x="false">
+        <range bottom="0.000000" right="1.000000" top="1.000000" left="0.000000"/>
         <limitY/>
        </plot>
       </DockArea>
-      <DockArea name="...">
-       <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-        <range top="1.000000" right="1.000000" bottom="0.000000" left="0.000000"/>
+      <DockArea name="Energy error">
+       <plot mode="TimeSeries" style="Lines" flip_y="false" flip_x="false">
+        <range bottom="-287.951574" right="31.159198" top="227.257467" left="22.659266"/>
         <limitY/>
+        <curve color="#1f77b4" name="/TEC3/TEE&#x9;[UNKNOWN]"/>
+        <curve color="#d62728" name="/TEC3/Emax&#x9;[UNKNOWN]"/>
+        <curve color="#1ac938" name="/TEC3/Emin&#x9;[UNKNOWN]"/>
        </plot>
       </DockArea>
       <DockArea name="Energy balance">
-       <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-        <range top="-0.997691" right="32.255680" bottom="-363.693944" left="22.639274"/>
+       <plot mode="TimeSeries" style="Lines" flip_y="false" flip_x="false">
+        <range bottom="-13.444831" right="31.159198" top="505.765627" left="22.659266"/>
         <limitY/>
-        <curve name="/TEC2/EBE&#x9;[UNKNOWN]" color="#1f77b4"/>
-        <curve name="/TEC2/EBD&#x9;[UNKNOWN]" color="#d62728"/>
+        <curve color="#1f77b4" name="/TEC2/EBE&#x9;[UNKNOWN]"/>
+        <curve color="#d62728" name="/TEC2/EBD&#x9;[UNKNOWN]"/>
        </plot>
       </DockArea>
      </DockSplitter>
-     <DockSplitter orientation="|" sizes="0.333115;0.33377;0.333115" count="3">
+     <DockSplitter sizes="0.332459;0.335082;0.332459" count="3" orientation="|">
       <DockArea name="...">
-       <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-        <range top="1.000000" right="1.000000" bottom="0.000000" left="0.000000"/>
+       <plot mode="TimeSeries" style="Lines" flip_y="false" flip_x="false">
+        <range bottom="0.000000" right="1.000000" top="1.000000" left="0.000000"/>
         <limitY/>
        </plot>
       </DockArea>
-      <DockArea name="...">
-       <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-        <range top="1.000000" right="1.000000" bottom="0.000000" left="0.000000"/>
+      <DockArea name="Energy rate error">
+       <plot mode="TimeSeries" style="Lines" flip_y="false" flip_x="false">
+        <range bottom="-34.370530" right="31.159198" top="115.366185" left="22.659266"/>
         <limitY/>
+        <curve color="#1f77b4" name="/TEC3/TEDE&#x9;[UNKNOWN]"/>
        </plot>
       </DockArea>
       <DockArea name="Energy balance rate">
-       <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-        <range top="226.357641" right="32.255680" bottom="-223.519262" left="22.639274"/>
+       <plot mode="TimeSeries" style="Lines" flip_y="false" flip_x="false">
+        <range bottom="-6.762407" right="31.159198" top="213.616549" left="22.659266"/>
         <limitY/>
-        <curve name="/TEC2/EBDE&#x9;[UNKNOWN]" color="#1f77b4"/>
-        <curve name="/TEC2/EBDD&#x9;[UNKNOWN]" color="#d62728"/>
-        <curve name="/TEC2/I&#x9;[UNKNOWN]" color="#1ac938"/>
+        <curve color="#1f77b4" name="/TEC2/EBDE&#x9;[UNKNOWN]"/>
+        <curve color="#d62728" name="/TEC2/EBDD&#x9;[UNKNOWN]"/>
+        <curve color="#1ac938" name="/TEC2/I&#x9;[UNKNOWN]"/>
        </plot>
       </DockArea>
      </DockSplitter>
-     <DockSplitter orientation="|" sizes="0.333115;0.33377;0.333115" count="3">
+     <DockSplitter sizes="0.332459;0.335082;0.332459" count="3" orientation="|">
       <DockArea name="Pitch demand sources">
-       <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-        <range top="104.710540" right="32.255680" bottom="-52.631766" left="22.639274"/>
+       <plot mode="TimeSeries" style="Lines" flip_y="false" flip_x="false">
+        <range bottom="-62.240187" right="31.159198" top="77.734698" left="22.659266"/>
         <limitY/>
-        <curve name="/TEC2/EBDDT&#x9;[UNKNOWN]" color="#1f77b4"/>
-        <curve name="/TEC2/I&#x9;[UNKNOWN]" color="#d62728"/>
-        <curve name="/TEC2/KI&#x9;[UNKNOWN]" color="#1ac938"/>
+        <curve color="#1f77b4" name="/TEC2/EBDDT&#x9;[UNKNOWN]"/>
+        <curve color="#d62728" name="/TEC2/I&#x9;[UNKNOWN]"/>
+        <curve color="#1ac938" name="/TEC2/KI&#x9;[UNKNOWN]"/>
        </plot>
       </DockArea>
       <DockArea name="Control weights">
-       <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-        <range top="1.000000" right="1.000000" bottom="0.000000" left="0.000000"/>
+       <plot mode="TimeSeries" style="Lines" flip_y="false" flip_x="false">
+        <range bottom="-0.025000" right="31.159198" top="1.025000" left="22.659266"/>
         <limitY/>
-        <curve name="/TEC2/KEW&#x9;[UNKNOWN]" color="#1f77b4"/>
-        <curve name="/TEC2/PEW&#x9;[UNKNOWN]" color="#d62728"/>
+        <curve color="#1f77b4" name="/TEC2/KEW&#x9;[UNKNOWN]"/>
+        <curve color="#d62728" name="/TEC2/PEW&#x9;[UNKNOWN]"/>
        </plot>
       </DockArea>
       <DockArea name="Flight stage">
-       <plot flip_y="false" flip_x="false" style="Lines" mode="TimeSeries">
-        <range top="1.100000" right="32.255680" bottom="0.900000" left="22.639274"/>
+       <plot mode="TimeSeries" style="Lines" flip_y="false" flip_x="false">
+        <range bottom="0.950000" right="31.159198" top="3.050000" left="22.659266"/>
         <limitY/>
-        <curve name="/STAT/Stage" color="#1f77b4"/>
+        <curve color="#1f77b4" name="/STAT/Stage"/>
        </plot>
       </DockArea>
      </DockSplitter>
