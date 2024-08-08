@@ -823,15 +823,92 @@
         </plot>
        </DockArea>
        <DockArea name="Yaw performance">
-        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
-         <range bottom="-8.999750" top="368.989742" left="0.499461" right="788.300395"/>
-         <limitY/>
-         <curve color="#1f77b4" name="/ATT/Yaw&#x9;[degheading]"/>
-         <curve color="#d62728" name="/ATT/DesYaw&#x9;[degheading]"/>
-         <curve color="#1ac938" name="/NTUN/NavBrg&#x9;[deg]"/>
-        </plot>
-       </DockArea>
-      </DockSplitter>
+  <Tab tab_name="Position Ctrl" containers="1">
+   <Container>
+    <DockSplitter sizes="0.3337;0.332599;0.3337" orientation="-" count="3">
+     <DockSplitter sizes="0.333115;0.33377;0.333115" orientation="|" count="3">
+      <DockArea name="Position North">
+       <plot flip_x="false" style="Lines" mode="TimeSeries" flip_y="false">
+        <range top="-114.593248" right="28.000918" bottom="-122.630011" left="0.001134"/>
+        <limitY/>
+        <curve name="/PSCN/PN&#x9;[m]" color="#1f77b4"/>
+        <curve name="/PSCN/TPN&#x9;[m]" color="#d62728"/>
+       </plot>
+      </DockArea>
+      <DockArea name="Position East">
+       <plot flip_x="false" style="Lines" mode="TimeSeries" flip_y="false">
+        <range top="-46.969177" right="28.001001" bottom="-56.705582" left="0.001138"/>
+        <limitY/>
+        <curve name="/PSCE/PE&#x9;[m]" color="#1f77b4"/>
+        <curve name="/PSCE/TPE&#x9;[m]" color="#d62728"/>
+       </plot>
+      </DockArea>
+      <DockArea name="Position Down">
+       <plot flip_x="false" style="Lines" mode="TimeSeries" flip_y="false">
+        <range top="9.537267" right="28.001006" bottom="-6.077986" left="0.001142"/>
+        <limitY/>
+        <curve name="/PSCD/PD&#x9;[m]" color="#1f77b4"/>
+        <curve name="/PSCD/TPD&#x9;[m]" color="#d62728"/>
+       </plot>
+      </DockArea>
+     </DockSplitter>
+     <DockSplitter sizes="0.333115;0.33377;0.333115" orientation="|" count="3">
+      <DockArea name="Velocity North">
+       <plot flip_x="false" style="Lines" mode="TimeSeries" flip_y="false">
+        <range top="0.894690" right="28.000918" bottom="-2.771756" left="0.001134"/>
+        <limitY/>
+        <curve name="/PSCN/VN&#x9;[m s⁻¹]" color="#1f77b4"/>
+        <curve name="/PSCN/TVN&#x9;[m s⁻¹]" color="#d62728"/>
+        <curve name="/PSCN/DVN&#x9;[m s⁻¹]" color="#1ac938"/>
+       </plot>
+      </DockArea>
+      <DockArea name="Velocity East">
+       <plot flip_x="false" style="Lines" mode="TimeSeries" flip_y="false">
+        <range top="5.306610" right="28.001001" bottom="-5.898833" left="0.001138"/>
+        <limitY/>
+        <curve name="/PSCE/VE&#x9;[m s⁻¹]" color="#1f77b4"/>
+        <curve name="/PSCE/TVE&#x9;[m s⁻¹]" color="#d62728"/>
+        <curve name="/PSCE/DVE&#x9;[m s⁻¹]" color="#1ac938"/>
+       </plot>
+      </DockArea>
+      <DockArea name="Velocity Down">
+       <plot flip_x="false" style="Lines" mode="TimeSeries" flip_y="false">
+        <range top="10.031878" right="28.001006" bottom="-2.390367" left="0.001142"/>
+        <limitY/>
+        <curve name="/PSCD/VD&#x9;[m s⁻¹]" color="#1f77b4"/>
+        <curve name="/PSCD/TVD&#x9;[m s⁻¹]" color="#d62728"/>
+        <curve name="/PSCD/DVD&#x9;[m s⁻¹]" color="#1ac938"/>
+       </plot>
+      </DockArea>
+     </DockSplitter>
+     <DockSplitter sizes="0.333115;0.33377;0.333115" orientation="|" count="3">
+      <DockArea name="Acceleration North">
+       <plot flip_x="false" style="Lines" mode="TimeSeries" flip_y="false">
+        <range top="5.757109" right="28.000918" bottom="-1.943378" left="0.001134"/>
+        <limitY/>
+        <curve name="/PSCN/AN&#x9;[m s⁻²]" color="#1f77b4"/>
+        <curve name="/PSCN/TAN&#x9;[m s⁻²]" color="#d62728"/>
+        <curve name="/PSCN/DAN&#x9;[m s⁻²]" color="#1ac938"/>
+       </plot>
+      </DockArea>
+      <DockArea name="Acceleration East">
+       <plot flip_x="false" style="Lines" mode="TimeSeries" flip_y="false">
+        <range top="5.595287" right="28.001001" bottom="-3.719962" left="0.001138"/>
+        <limitY/>
+        <curve name="/PSCE/AE&#x9;[m s⁻²]" color="#1f77b4"/>
+        <curve name="/PSCE/TAE&#x9;[m s⁻²]" color="#d62728"/>
+        <curve name="/PSCE/DAE&#x9;[m s⁻²]" color="#1ac938"/>
+       </plot>
+      </DockArea>
+      <DockArea name="Acceleration Down">
+       <plot flip_x="false" style="Lines" mode="TimeSeries" flip_y="false">
+        <range top="16.471787" right="28.001006" bottom="-88.486002" left="0.001142"/>
+        <limitY/>
+        <curve name="/PSCD/AD&#x9;[m s⁻²]" color="#1f77b4"/>
+        <curve name="/PSCD/TAD&#x9;[m s⁻²]" color="#d62728"/>
+        <curve name="/PSCD/DAD&#x9;[m s⁻²]" color="#1ac938"/>
+       </plot>
+      </DockArea>
      </DockSplitter>
     </DockSplitter>
    </Container>
