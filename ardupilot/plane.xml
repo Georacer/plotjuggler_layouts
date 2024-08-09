@@ -1517,13 +1517,13 @@
  
  
  <customMathEquations>
-  <snippet name="Mag 2 norm [Gauss]">
+  <snippet name="Mag 0 norm [Gauss]">
    <global />
    <function>return math.sqrt(value*value + v1*v1 + v2*v2)</function>
-   <linked_source>/MAG/#2/MagX	[Gauss]</linked_source>
+   <linked_source>/MAG/#0/MagX	[Gauss]</linked_source>
    <additional_sources>
-    <v1>/MAG/#2/MagY	[Gauss]</v1>
-    <v2>/MAG/#2/MagZ	[Gauss]</v2>
+    <v1>/MAG/#0/MagY	[Gauss]</v1>
+    <v2>/MAG/#0/MagZ	[Gauss]</v2>
    </additional_sources>
   </snippet>
   <snippet name="Mag 1 norm [Gauss]">
@@ -1535,16 +1535,24 @@
     <v2>/MAG/#1/MagZ	[Gauss]</v2>
    </additional_sources>
   </snippet>
-  <snippet name="Mag 0 norm [Gauss]">
+  <snippet name="Mag 2 norm [Gauss]">
    <global />
    <function>return math.sqrt(value*value + v1*v1 + v2*v2)</function>
-   <linked_source>/MAG/#0/MagX	[Gauss]</linked_source>
+   <linked_source>/MAG/#2/MagX	[Gauss]</linked_source>
    <additional_sources>
-    <v1>/MAG/#0/MagY	[Gauss]</v1>
-    <v2>/MAG/#0/MagZ	[Gauss]</v2>
+    <v1>/MAG/#2/MagY	[Gauss]</v1>
+    <v2>/MAG/#2/MagZ	[Gauss]</v2>
    </additional_sources>
   </snippet>
-  <snippet name="Thrust estimate [N]">
+  <snippet name="RXRSSI resampled by XKF">
+   <global />
+   <function>return v1</function>
+   <linked_source>/XKF1/#0/PN	[m]</linked_source>
+   <additional_sources>
+    <v1>/RSSI/RXRSSI</v1>
+   </additional_sources>
+  </snippet>
+ <snippet name="Thrust estimate [N]">
    <global />
    <function>thruster_eff = 0.6
 n = thruster_eff*math.log(math.abs(value))/math.log(10)/1.35
@@ -1554,64 +1562,6 @@ return v1*n/value</function>
    <additional_sources>
     <v1>power 0 [W]</v1>
    </additional_sources>
-  </snippet>
-  <snippet name="power 0 [W]">
-   <global />
-   <function>return value*v1</function>
-   <linked_source>/BAT/#0/Curr	[A]</linked_source>
-   <additional_sources>
-    <v1>/BAT/#0/Volt	[V]</v1>
-   </additional_sources>
-  </snippet>
-  <snippet name="power 1 [W]">
-   <global />
-   <function>return value*v1</function>
-   <linked_source>/BAT/#1/Curr	[A]</linked_source>
-   <additional_sources>
-    <v1>/BAT/#1/Volt	[V]</v1>
-   </additional_sources>
-  </snippet>
-  <snippet name="distance from home 0">
-   <global />
-   <function>return math.sqrt(value*value+v1*v1+v2*v2)</function>
-   <linked_source>/XKF1/#0/PD	[m]</linked_source>
-   <additional_sources>
-    <v1>/XKF1/#0/PE	[m]</v1>
-    <v2>/XKF1/#0/PN	[m]</v2>
-   </additional_sources>
-  </snippet>
-  <snippet name="baro_1_alt_deriv">
-   <global>firstX = 0
-firstY = 0
-is_first = true
-secondX = 0
-secondY = 0
-is_second = false</global>
-   <function>-- Wait for initial values
-if (is_first) then
-  is_first = false
-  is_second = true
-  firstX = time
-  firstY = value
-end
-
-if (is_second) then
-  is_second = false
-  secondX = time
-  secondY = value
-end
-
--- Central derivative: dy/dx ~= f(x+delta_x)-f(x-delta_x)/(2*delta_x)
-dx = time - firstX
-dy = value - firstY
--- Increment
-firstX = secondX
-firstY = secondY
-secondX = time
-secondY = value
-
-return -dy/dx</function>
-   <linked_source>/BARO/#1/Alt	[m]</linked_source>
   </snippet>
   <snippet name="baro_0_alt_deriv">
    <global>firstX = 0
@@ -1646,15 +1596,65 @@ secondY = value
 return -dy/dx</function>
    <linked_source>/BARO/#0/Alt	[m]</linked_source>
   </snippet>
-  <snippet name="RXRSSI resampled by XKF">
+  <snippet name="baro_1_alt_deriv">
+   <global>firstX = 0
+firstY = 0
+is_first = true
+secondX = 0
+secondY = 0
+is_second = false</global>
+   <function>-- Wait for initial values
+if (is_first) then
+  is_first = false
+  is_second = true
+  firstX = time
+  firstY = value
+end
+
+if (is_second) then
+  is_second = false
+  secondX = time
+  secondY = value
+end
+
+-- Central derivative: dy/dx ~= f(x+delta_x)-f(x-delta_x)/(2*delta_x)
+dx = time - firstX
+dy = value - firstY
+-- Increment
+firstX = secondX
+firstY = secondY
+secondX = time
+secondY = value
+
+return -dy/dx</function>
+   <linked_source>/BARO/#1/Alt	[m]</linked_source>
+  </snippet>
+  <snippet name="distance from home 0">
    <global />
-   <function>return v1</function>
-   <linked_source>/XKF1/#0/PN	[m]</linked_source>
+   <function>return math.sqrt(value*value+v1*v1+v2*v2)</function>
+   <linked_source>/XKF1/#0/PD	[m]</linked_source>
    <additional_sources>
-    <v1>/RSSI/RXRSSI</v1>
+    <v1>/XKF1/#0/PE	[m]</v1>
+    <v2>/XKF1/#0/PN	[m]</v2>
    </additional_sources>
   </snippet>
- </customMathEquations>
+  <snippet name="power 0 [W]">
+   <global />
+   <function>return value*v1</function>
+   <linked_source>/BAT/#0/Curr	[A]</linked_source>
+   <additional_sources>
+    <v1>/BAT/#0/Volt	[V]</v1>
+   </additional_sources>
+  </snippet>
+  <snippet name="power 1 [W]">
+   <global />
+   <function>return value*v1</function>
+   <linked_source>/BAT/#1/Curr	[A]</linked_source>
+   <additional_sources>
+    <v1>/BAT/#1/Volt	[V]</v1>
+   </additional_sources>
+  </snippet>
+  </customMathEquations>
  <snippets />
  
 </root>
