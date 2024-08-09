@@ -1401,6 +1401,25 @@ return -dy/dx</function>
     <v1>/RSSI/RXRSSI</v1>
    </additional_sources>
   </snippet>
+  <snippet name="Current estimate [A]">
+   <global>k = 10000
+num_motors = 4
+thr_min = 1000
+thr_range = 1000</global>
+   <function>thr_total = value+v1+v2+v3+v4+v5+v6+v7
+thr = (thr_total - num_motors*thr_min)/(thr_range*thr_min)
+return thr*k</function>
+   <linked_source>/RCOU/C1	[us]</linked_source>
+   <additional_sources>
+    <v1>/RCOU/C2	[us]</v1>
+    <v2>/RCOU/C3	[us]</v2>
+    <v3>/RCOU/C4	[us]</v3>
+    <v4>/RCOU/C5	[us]</v4>
+    <v5>/RCOU/C6	[us]</v5>
+    <v6>/RCOU/C7	[us]</v6>
+    <v7>/RCOU/C8	[us]</v7>
+   </additional_sources>
+  </snippet>
  </customMathEquations>
  <snippets/>
  <!-- - - - - - - - - - - - - - - -->
