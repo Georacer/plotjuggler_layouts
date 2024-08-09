@@ -823,6 +823,19 @@
         </plot>
        </DockArea>
        <DockArea name="Yaw performance">
+        <plot style="Lines" mode="TimeSeries" flip_x="false" flip_y="false">
+         <range bottom="-8.999750" top="368.989742" left="0.499461" right="788.300395"/>
+         <limitY/>
+         <curve color="#1f77b4" name="/ATT/Yaw&#x9;[degheading]"/>
+         <curve color="#d62728" name="/ATT/DesYaw&#x9;[degheading]"/>
+         <curve color="#1ac938" name="/NTUN/NavBrg&#x9;[deg]"/>
+        </plot>
+       </DockArea>
+      </DockSplitter>
+     </DockSplitter>
+    </DockSplitter>
+   </Container>
+  </Tab>
   <Tab tab_name="Position Ctrl" containers="1">
    <Container>
     <DockSplitter sizes="0.3337;0.332599;0.3337" orientation="-" count="3">
