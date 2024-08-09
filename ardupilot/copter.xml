@@ -1044,17 +1044,18 @@
          <curve color="#ff7f0e" name="/AETR/Thr"/>
         </plot>
        </DockArea>
-       <DockArea name="Thrust estimate">
-        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
-         <range top="0.096359" right="2023.800493" bottom="0.026162" left="1742.011991"/>
+       <DockArea name="...">
+        <plot flip_x="false" style="Lines" mode="TimeSeries" flip_y="false">
+         <range top="0.100000" right="28.000850" bottom="-0.100000" left="0.001098"/>
          <limitY/>
-         <curve color="#1f77b4" name="Thrust estimate [N]"/>
         </plot>
        </DockArea>
-       <DockArea name="...">
-        <plot style="Lines" flip_y="false" mode="TimeSeries" flip_x="false">
-         <range top="19.151337" right="788.299471" bottom="-0.467106" left="0.398755"/>
+       <DockArea name="Current model">
+        <plot flip_x="false" style="Lines" mode="TimeSeries" flip_y="false">
+         <range top="64.190625" right="28.100327" bottom="-1.565625" left="0.000327"/>
          <limitY/>
+         <curve name="Current estimate [A]" color="#1f77b4"/>
+         <curve name="/BAT/#0/Curr&#x9;[A]" color="#d62728"/>
         </plot>
        </DockArea>
       </DockSplitter>
