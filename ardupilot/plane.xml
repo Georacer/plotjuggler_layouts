@@ -245,6 +245,8 @@
          <limitY />
          <curve color="#1f77b4" name="/BAT/#0/H" />
          <curve color="#d62728" name="/BAT/#0/SH&#09;[%]" />
+        </plot>
+       </DockArea>
        <DockArea name="Pitot health">
         <plot flip_x="false" style="Lines" mode="TimeSeries" flip_y="false">
          <range top="1.025000" bottom="-0.025000" right="905.622604" left="805.500799"/>
