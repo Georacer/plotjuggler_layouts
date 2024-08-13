@@ -217,7 +217,7 @@
    <Container>
     <DockSplitter count="1" orientation="-" sizes="1">
      <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
-      <DockSplitter count="3" orientation="-" sizes="0.3337;0.332599;0.3337">
+      <DockSplitter count="4" orientation="-" sizes="0.250276;0.242558;0.240353;0.266814">
        <DockArea name="Temperatures">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="-1.108092" left="0.499461" right="788.300395" top="45.431765" />
@@ -245,6 +245,12 @@
          <limitY />
          <curve color="#1f77b4" name="/BAT/#0/H" />
          <curve color="#d62728" name="/BAT/#0/SH&#09;[%]" />
+       <DockArea name="Pitot health">
+        <plot flip_x="false" style="Lines" mode="TimeSeries" flip_y="false">
+         <range top="1.025000" bottom="-0.025000" right="905.622604" left="805.500799"/>
+         <limitY/>
+         <curve name="/ARSP/#0/H" color="#1f77b4"/>
+         <curve name="/ARSP/#0/Hp" color="#d62728"/>
         </plot>
        </DockArea>
       </DockSplitter>
