@@ -530,6 +530,58 @@
     </DockSplitter>
    </Container>
   </Tab>
+  <Tab containers="1" tab_name="EKF lanes">
+   <Container>
+    <DockSplitter count="1" orientation="-" sizes="1">
+     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+      <DockSplitter count="2" orientation="-" sizes="0.50055;0.49945">
+       <DockArea name="...">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="-1.200000" left="1721993581.600141" right="1721993609.680289" top="49.200000" />
+         <limitY />
+         <curve color="#1f77b4" name="/XKF4/#0/FS" />
+         <curve color="#d62728" name="/XKF4/#0/TS" />
+         <curve color="#1ac938" name="/XKF4/#0/SS" />
+         <curve color="#ff7f0e" name="/XKF4/#0/GPS" />
+        </plot>
+       </DockArea>
+       <DockArea name="...">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0.000000" left="0.000000" right="1.000000" top="1.000000" />
+         <limitY />
+        </plot>
+       </DockArea>
+      </DockSplitter>
+      <DockSplitter count="2" orientation="-" sizes="0.50055;0.49945">
+       <DockArea name="EKF 0 lane and source">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="-0.025000" left="1721993581.600141" right="1721993609.680289" top="1.025000" />
+         <limitY />
+         <curve color="#1f77b4" name="/XKF4/#0/PI" />
+         <curve color="#d62728" name="/XKFS/#0/AI" />
+         <curve color="#1ac938" name="/XKFS/#0/BI" />
+         <curve color="#ff7f0e" name="/XKFS/#0/GI" />
+         <curve color="#f14cc1" name="/XKFS/#0/MI" />
+         <curve color="#9467bd" name="/XKFS/#0/SS" />
+        </plot>
+       </DockArea>
+       <DockArea name="EKF 1 lane and source">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="-0.025000" left="1721993581.600141" right="1721993609.680289" top="1.025000" />
+         <limitY />
+         <curve color="#1f77b4" name="/XKF4/#1/PI" />
+         <curve color="#d62728" name="/XKFS/#1/AI" />
+         <curve color="#1ac938" name="/XKFS/#1/BI" />
+         <curve color="#ff7f0e" name="/XKFS/#1/GI" />
+         <curve color="#f14cc1" name="/XKFS/#1/MI" />
+         <curve color="#9467bd" name="/XKFS/#1/SS" />
+        </plot>
+       </DockArea>
+      </DockSplitter>
+     </DockSplitter>
+    </DockSplitter>
+   </Container>
+  </Tab>
   <Tab containers="1" tab_name="INS">
    <Container>
     <DockSplitter count="1" orientation="-" sizes="1">
