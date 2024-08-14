@@ -530,6 +530,74 @@
     </DockSplitter>
    </Container>
   </Tab>
+  <Tab containers="1" tab_name="Yaw solution">
+   <Container>
+    <DockSplitter count="3" orientation="-" sizes="0.3337;0.332599;0.3337">
+     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+      <DockArea name="Yaw solutions">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="6.293500" left="0.001121" right="191.779135" top="10.766500" />
+        <limitY />
+        <curve color="#1f77b4" name="/ATT/Yaw&#09;[degheading]" />
+        <curve color="#d62728" name="/AHR2/Yaw&#09;[degheading]" />
+        <curve color="#1ac938" name="/XKF1/#0/Yaw&#09;[degheading]" />
+        <curve color="#ff7f0e" name="/XKF1/#1/Yaw&#09;[degheading]" />
+       </plot>
+      </DockArea>
+      <DockArea name="...">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0.000000" left="0.000000" right="1.000000" top="1.000000" />
+        <limitY />
+       </plot>
+      </DockArea>
+     </DockSplitter>
+     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+      <DockArea name="EKF 0 GSF estimates">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="-8.929331" left="0.100752" right="176.878091" top="368.997432" />
+        <limitY />
+        <curve color="#1f77b4" name="/XKY0/#0/Y0&#09;[degheading]" />
+        <curve color="#d62728" name="/XKY0/#0/Y1&#09;[degheading]" />
+        <curve color="#1ac938" name="/XKY0/#0/Y2&#09;[degheading]" />
+        <curve color="#ff7f0e" name="/XKY0/#0/Y3&#09;[degheading]" />
+        <curve color="#f14cc1" name="/XKY0/#0/Y4&#09;[degheading]" />
+        <curve color="#9467bd" name="/XKY0/#0/YC&#09;[degheading]" />
+       </plot>
+      </DockArea>
+      <DockArea name="EKF yaw test ratio">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="-0.275000" left="0.000000" right="191.778055" top="11.275000" />
+        <limitY />
+        <curve color="#1f77b4" name="/XKF4/#0/SM" />
+        <curve color="#d62728" name="/XKF4/#1/SM" />
+       </plot>
+      </DockArea>
+     </DockSplitter>
+     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+      <DockArea name="EKF 1 GSF estimates">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="-8.988273" left="0.100752" right="176.878091" top="368.998745" />
+        <limitY />
+        <curve color="#1f77b4" name="/XKY0/#1/Y0&#09;[degheading]" />
+        <curve color="#d62728" name="/XKY0/#1/Y1&#09;[degheading]" />
+        <curve color="#1ac938" name="/XKY0/#1/Y2&#09;[degheading]" />
+        <curve color="#ff7f0e" name="/XKY0/#1/Y3&#09;[degheading]" />
+        <curve color="#f14cc1" name="/XKY0/#1/Y4&#09;[degheading]" />
+        <curve color="#9467bd" name="/XKY0/#1/YC&#09;[degheading]" />
+       </plot>
+      </DockArea>
+      <DockArea name="EKF GSF uncertainty">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="-0.193000" left="0.100752" right="176.878091" top="15.410582" />
+        <limitY />
+        <curve color="#1f77b4" name="/XKY0/#0/YCS&#09;[deg]" />
+        <curve color="#d62728" name="/XKY0/#1/YCS&#09;[deg]" />
+       </plot>
+      </DockArea>
+     </DockSplitter>
+    </DockSplitter>
+   </Container>
+  </Tab>
   <Tab containers="1" tab_name="EKF lanes">
    <Container>
     <DockSplitter count="1" orientation="-" sizes="1">
