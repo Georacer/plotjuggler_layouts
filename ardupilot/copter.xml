@@ -3,9 +3,9 @@
  <tabbed_widget name="Main Window" parent="main_window">
   <Tab containers="1" tab_name="Flight Overview">
    <Container>
-    <DockSplitter count="1" orientation="-" sizes="1">
-     <DockSplitter count="2" orientation="|" sizes="0.499345;0.500655">
-      <DockSplitter count="2" orientation="-" sizes="0.666667;0.333333">
+    <DockSplitter count="1" orientation="-" sizes="1.00">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+      <DockSplitter count="2" orientation="-" sizes="0.67;0.33">
        <DockArea name="Local position">
         <plot flip_x="false" flip_y="false" mode="XYPlot" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -21,8 +21,8 @@
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter count="3" orientation="-" sizes="0.3337;0.332599;0.3337">
-       <DockSplitter count="2" orientation="|" sizes="0.500655;0.499345">
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
+       <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
         <DockArea name="Global position">
          <plot flip_x="false" flip_y="false" mode="XYPlot" style="Lines">
           <range bottom="0" left="0" right="100" top="100" />
@@ -63,8 +63,8 @@
   </Tab>
   <Tab containers="1" tab_name="Errors">
    <Container>
-    <DockSplitter count="2" orientation="-" sizes="0.346535;0.653465">
-     <DockSplitter count="3" orientation="|" sizes="0.333115;0.33377;0.333115">
+    <DockSplitter count="2" orientation="-" sizes="0.35;0.65">
+     <DockSplitter count="3" orientation="|" sizes="0.33;0.33;0.33">
       <DockArea name="Error codes">
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
@@ -90,8 +90,8 @@
        </plot>
       </DockArea>
      </DockSplitter>
-     <DockSplitter count="2" orientation="|" sizes="0.332896;0.667104">
-      <DockSplitter count="2" orientation="-" sizes="0.500843;0.499157">
+     <DockSplitter count="2" orientation="|" sizes="0.33;0.67">
+      <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
        <DockArea name="Internal errors">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -108,8 +108,8 @@
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter count="2" orientation="-" sizes="0.500843;0.499157">
-       <DockSplitter count="2" orientation="|" sizes="0.500492;0.499508">
+      <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
+       <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
         <DockArea name="Error count">
          <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
           <range bottom="0" left="0" right="100" top="100" />
@@ -126,7 +126,7 @@
          </plot>
         </DockArea>
        </DockSplitter>
-       <DockSplitter count="2" orientation="|" sizes="0.500492;0.499508">
+       <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
         <DockArea name="Error line">
          <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
           <range bottom="0" left="0" right="100" top="100" />
@@ -149,8 +149,8 @@
   </Tab>
   <Tab containers="1" tab_name="Operator">
    <Container>
-    <DockSplitter count="3" orientation="-" sizes="0.3337;0.332599;0.3337">
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+    <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
       <DockArea name="Main inputs">
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
@@ -168,7 +168,7 @@
        </plot>
       </DockArea>
      </DockSplitter>
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
       <DockArea name="Secondary inputs">
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
@@ -187,7 +187,7 @@
        </plot>
       </DockArea>
      </DockSplitter>
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
       <DockArea name="Other inputs">
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
@@ -215,9 +215,9 @@
   </Tab>
   <Tab containers="1" tab_name="Avionics general">
    <Container>
-    <DockSplitter count="1" orientation="-" sizes="1">
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
-      <DockSplitter count="3" orientation="-" sizes="0.3337;0.332599;0.3337">
+    <DockSplitter count="1" orientation="-" sizes="1.00">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
        <DockArea name="Temperatures">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -248,7 +248,7 @@
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter count="3" orientation="-" sizes="0.3337;0.332599;0.3337">
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
        <DockArea name="Electronics voltage">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -280,8 +280,8 @@
   </Tab>
   <Tab containers="1" tab_name="RC link">
    <Container>
-    <DockSplitter count="2" orientation="-" sizes="0.50055;0.49945">
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+    <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
       <DockArea name="Link quality">
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
@@ -297,7 +297,7 @@
        </plot>
       </DockArea>
      </DockSplitter>
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
       <DockArea name="RSSI vs yaw">
        <plot flip_x="false" flip_y="false" mode="XYPlot" style="Dots">
         <range bottom="0" left="0" right="100" top="100" />
@@ -318,8 +318,8 @@
   </Tab>
   <Tab containers="1" tab_name="Processor">
    <Container>
-    <DockSplitter count="2" orientation="-" sizes="0.50385;0.49615">
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+    <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
       <DockArea name="Loop rate">
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
@@ -335,7 +335,7 @@
        </plot>
       </DockArea>
      </DockSplitter>
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
       <DockArea name="CPU load">
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
@@ -357,8 +357,8 @@
   </Tab>
   <Tab containers="1" tab_name="GPS Health">
    <Container>
-    <DockSplitter count="2" orientation="-" sizes="0.50165;0.49835">
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+    <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
       <DockArea name="Status">
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
@@ -366,7 +366,7 @@
         <curve color="#1f77b4" name="/GPS/#0/Status" />
        </plot>
       </DockArea>
-      <DockSplitter count="2" orientation="-" sizes="0.501099;0.498901">
+      <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
        <DockArea name="Horizontal accuracy">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -383,7 +383,7 @@
        </DockArea>
       </DockSplitter>
      </DockSplitter>
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
       <DockArea name="Satellites">
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
@@ -391,7 +391,7 @@
         <curve color="#1f77b4" name="/GPS/#0/NSats&#09;[satellites]" />
        </plot>
       </DockArea>
-      <DockSplitter count="2" orientation="-" sizes="0.5;0.5">
+      <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
        <DockArea name="Vertical accuracy">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -413,8 +413,8 @@
   </Tab>
   <Tab containers="1" tab_name="Vibration">
    <Container>
-    <DockSplitter count="1" orientation="-" sizes="1">
-     <DockSplitter count="4" orientation="-" sizes="0.250276;0.250276;0.249173;0.250276">
+    <DockSplitter count="1" orientation="-" sizes="1.00">
+     <DockSplitter count="4" orientation="-" sizes="0.25;0.25;0.25;0.25">
       <DockArea name="Clipping">
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
@@ -457,9 +457,9 @@
   </Tab>
   <Tab containers="1" tab_name="Sensor agreement">
    <Container>
-    <DockSplitter count="1" orientation="-" sizes="1">
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
-      <DockSplitter count="2" orientation="-" sizes="0.50055;0.49945">
+    <DockSplitter count="1" orientation="-" sizes="1.00">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+      <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
        <DockArea name="Altitude">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -483,7 +483,7 @@
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter count="4" orientation="-" sizes="0.250276;0.250276;0.249173;0.250276">
+      <DockSplitter count="4" orientation="-" sizes="0.25;0.25;0.25;0.25">
        <DockArea name="EKF 0 innovation tests">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -532,8 +532,8 @@
   </Tab>
   <Tab containers="1" tab_name="Yaw solution">
    <Container>
-    <DockSplitter count="3" orientation="-" sizes="0.3337;0.332599;0.3337">
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+    <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
       <DockArea name="Yaw solutions">
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
@@ -551,7 +551,7 @@
        </plot>
       </DockArea>
      </DockSplitter>
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
       <DockArea name="EKF 0 GSF estimates">
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
@@ -573,7 +573,7 @@
        </plot>
       </DockArea>
      </DockSplitter>
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
       <DockArea name="EKF 1 GSF estimates">
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
@@ -600,9 +600,9 @@
   </Tab>
   <Tab containers="1" tab_name="EKF lanes">
    <Container>
-    <DockSplitter count="1" orientation="-" sizes="1">
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
-      <DockSplitter count="2" orientation="-" sizes="0.50055;0.49945">
+    <DockSplitter count="1" orientation="-" sizes="1.00">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+      <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
        <DockArea name="...">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -620,7 +620,7 @@
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter count="2" orientation="-" sizes="0.50055;0.49945">
+      <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
        <DockArea name="EKF 0 lane and source">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -652,9 +652,9 @@
   </Tab>
   <Tab containers="1" tab_name="INS">
    <Container>
-    <DockSplitter count="1" orientation="-" sizes="1">
-     <DockSplitter count="3" orientation="|" sizes="0.333115;0.33377;0.333115">
-      <DockSplitter count="3" orientation="-" sizes="0.3337;0.332599;0.3337">
+    <DockSplitter count="1" orientation="-" sizes="1.00">
+     <DockSplitter count="3" orientation="|" sizes="0.33;0.33;0.33">
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
        <DockArea name="Acceleration X">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -680,7 +680,7 @@
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter count="3" orientation="-" sizes="0.3337;0.332599;0.3337">
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
        <DockArea name="Angular velocity X">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -706,7 +706,7 @@
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter count="3" orientation="-" sizes="0.3337;0.332599;0.3337">
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
        <DockArea name="Magnetic field X">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -741,8 +741,8 @@
   </Tab>
   <Tab containers="1" tab_name="Optical Flow">
    <Container>
-    <DockSplitter count="3" orientation="-" sizes="0.3337;0.332599;0.3337">
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+    <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
       <DockArea name="...">
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
@@ -760,7 +760,7 @@
        </plot>
       </DockArea>
      </DockSplitter>
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
       <DockArea name="...">
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
@@ -777,7 +777,7 @@
        </plot>
       </DockArea>
      </DockSplitter>
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
       <DockArea name="...">
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
@@ -798,9 +798,9 @@
   </Tab>
   <Tab containers="1" tab_name="Rate Ctrl">
    <Container>
-    <DockSplitter count="1" orientation="-" sizes="1">
-     <DockSplitter count="2" orientation="|" sizes="0.469201;0.530799">
-      <DockSplitter count="4" orientation="-" sizes="0.250276;0.250276;0.249173;0.250276">
+    <DockSplitter count="1" orientation="-" sizes="1.00">
+     <DockSplitter count="2" orientation="|" sizes="0.47;0.53">
+      <DockSplitter count="4" orientation="-" sizes="0.25;0.25;0.25;0.25">
        <DockArea name="Pilot inputs">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -836,8 +836,8 @@
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter count="4" orientation="-" sizes="0.250276;0.250276;0.249173;0.250276">
-       <DockSplitter count="2" orientation="|" sizes="0.500618;0.499382">
+      <DockSplitter count="4" orientation="-" sizes="0.25;0.25;0.25;0.25">
+       <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
         <DockArea name="Motor outputs">
          <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
           <range bottom="0" left="0" right="100" top="100" />
@@ -897,9 +897,9 @@
   </Tab>
   <Tab containers="1" tab_name="Attitude Ctrl">
    <Container>
-    <DockSplitter count="1" orientation="-" sizes="1">
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
-      <DockSplitter count="3" orientation="-" sizes="0.3337;0.332599;0.3337">
+    <DockSplitter count="1" orientation="-" sizes="1.00">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
        <DockArea name="Pilot inputs">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -923,7 +923,7 @@
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter count="3" orientation="-" sizes="0.3337;0.332599;0.3337">
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
        <DockArea name="Roll performance">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -958,8 +958,8 @@
   </Tab>
   <Tab containers="1" tab_name="Position Ctrl">
    <Container>
-    <DockSplitter count="3" orientation="-" sizes="0.3337;0.332599;0.3337">
-     <DockSplitter count="3" orientation="|" sizes="0.333115;0.33377;0.333115">
+    <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
+     <DockSplitter count="3" orientation="|" sizes="0.33;0.33;0.33">
       <DockArea name="Position North">
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
@@ -985,7 +985,7 @@
        </plot>
       </DockArea>
      </DockSplitter>
-     <DockSplitter count="3" orientation="|" sizes="0.333115;0.33377;0.333115">
+     <DockSplitter count="3" orientation="|" sizes="0.33;0.33;0.33">
       <DockArea name="Velocity North">
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
@@ -1014,7 +1014,7 @@
        </plot>
       </DockArea>
      </DockSplitter>
-     <DockSplitter count="3" orientation="|" sizes="0.333115;0.33377;0.333115">
+     <DockSplitter count="3" orientation="|" sizes="0.33;0.33;0.33">
       <DockArea name="Acceleration North">
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
@@ -1048,9 +1048,9 @@
   </Tab>
   <Tab containers="1" tab_name="Navigator">
    <Container>
-    <DockSplitter count="1" orientation="-" sizes="1">
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
-      <DockSplitter count="2" orientation="-" sizes="0.50055;0.49945">
+    <DockSplitter count="1" orientation="-" sizes="1.00">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+      <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
        <DockArea name="Waypoint tracking">
         <plot flip_x="false" flip_y="false" mode="XYPlot" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -1069,7 +1069,7 @@
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter count="2" orientation="-" sizes="0.50055;0.49945">
+      <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
        <DockArea name="Distance to next waypoint">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -1092,9 +1092,9 @@
   </Tab>
   <Tab containers="1" tab_name="Power">
    <Container>
-    <DockSplitter count="1" orientation="-" sizes="1">
-     <DockSplitter count="3" orientation="|" sizes="0.333115;0.33377;0.333115">
-      <DockSplitter count="4" orientation="-" sizes="0.250276;0.250276;0.249173;0.250276">
+    <DockSplitter count="1" orientation="-" sizes="1.00">
+     <DockSplitter count="3" orientation="|" sizes="0.33;0.33;0.33">
+      <DockSplitter count="4" orientation="-" sizes="0.25;0.25;0.25;0.25">
        <DockArea name="Current">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -1128,7 +1128,7 @@
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter count="4" orientation="-" sizes="0.250276;0.250276;0.249173;0.250276">
+      <DockSplitter count="4" orientation="-" sizes="0.25;0.25;0.25;0.25">
        <DockArea name="Remaining %">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -1162,7 +1162,7 @@
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter count="4" orientation="-" sizes="0.250276;0.250276;0.249173;0.250276">
+      <DockSplitter count="4" orientation="-" sizes="0.25;0.25;0.25;0.25">
        <DockArea name="Airspeed">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -1198,9 +1198,9 @@
   </Tab>
   <Tab containers="1" tab_name="Landing">
    <Container>
-    <DockSplitter count="1" orientation="-" sizes="1">
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
-      <DockSplitter count="3" orientation="-" sizes="0.3337;0.332599;0.3337">
+    <DockSplitter count="1" orientation="-" sizes="1.00">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
        <DockArea name="...">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -1220,7 +1220,7 @@
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter count="3" orientation="-" sizes="0.3337;0.332599;0.3337">
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
        <DockArea name="...">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -1246,9 +1246,9 @@
   </Tab>
   <Tab containers="1" tab_name="Radio">
    <Container>
-    <DockSplitter count="1" orientation="-" sizes="1">
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
-      <DockSplitter count="3" orientation="-" sizes="0.3337;0.3337;0.332599">
+    <DockSplitter count="1" orientation="-" sizes="1.00">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
        <DockArea name="Packets transmitted">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -1274,7 +1274,7 @@
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter count="3" orientation="-" sizes="0.3337;0.3337;0.332599">
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
        <DockArea name="Flags">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -1306,9 +1306,9 @@
   </Tab>
   <Tab containers="1" tab_name="CAN">
    <Container>
-    <DockSplitter count="1" orientation="-" sizes="1">
-     <DockSplitter count="2" orientation="|" sizes="0.5;0.5">
-      <DockSplitter count="3" orientation="-" sizes="0.3337;0.332599;0.3337">
+    <DockSplitter count="1" orientation="-" sizes="1.00">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
        <DockArea name="TX 0">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -1332,7 +1332,7 @@
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter count="3" orientation="-" sizes="0.3337;0.332599;0.3337">
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
        <DockArea name="RX 0">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
