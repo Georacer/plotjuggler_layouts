@@ -12,7 +12,6 @@ def cancel_curve_deletions(input_file, output_file):
         for line in infile:
             # Detect the start of a hunk (e.g., "@@ -1,4 +1,3 @@")
             if line.startswith('@@'):
-                breakpoint()
                 if in_hunk and current_hunk:
                     # Process the completed hunk
                     updated_hunk, hunk_offset = process_hunk(current_hunk)
@@ -22,7 +21,7 @@ def cancel_curve_deletions(input_file, output_file):
 
                 # Write the updated hunk header with adjusted line numbers
                 line = adjust_hunk_header(line, line_offset)
-                outfile.write(line)
+                current_hunk.append(line)
                 in_hunk = True
 
             elif in_hunk:
@@ -39,9 +38,9 @@ def cancel_curve_deletions(input_file, output_file):
             outfile.writelines(updated_hunk)
 
 def process_hunk(hunk_lines):
-    breakpoint()
     new_hunk = []
     header = hunk_lines[0]
+    is_hunk_trivial = True  # This hunk has only trivial changes.
     
     # Parse the header to get old and new line counts
     match = re.match(r'@@ -(\d+),(\d+) \+(\d+),(\d+) @@', header)
@@ -55,12 +54,21 @@ def process_hunk(hunk_lines):
     hunk_offset = 0
 
     for line in hunk_lines[1:]:
-        match_deleted_curve = re.match(r'-\s*<curve.*', line)
-        breakpoint()
-        if match_deleted_curve:
-            # Skip this line to cancel deletion
-            old_count_adjusted -= 1
-            hunk_offset -= 1
+        if is_hunk_trivial:
+            match_deleted_curve = re.match(r'^(-)\s*<curve.*', line)
+            match_deleted_any = re.match(r'^-', line)
+            # If the first thing we found deleted is a curve, then we assume the hunk is trivial.
+            # As soon as we find something else, then it's not trivial.
+            if match_deleted_any and not match_deleted_curve:
+                is_hunk_trivial = False
+
+        if match_deleted_curve and is_hunk_trivial:
+            # Turn this line into a normal line.
+            new_line = re.sub(r'^(-)(\s*<curve.*)', r" \2", line)
+            new_hunk.append(new_line)
+            # The new hunk has one more line now.
+            new_count_adjusted += 1
+            hunk_offset += 1
         else:
             new_hunk.append(line)
             if line.startswith('-'):
@@ -85,7 +93,7 @@ def adjust_hunk_header(header, offset):
     old_start, old_count, new_start, new_count = map(int, match.groups())
 
     # Apply offset to the start line numbers
-    old_start_adjusted = old_start + offset
+    old_start_adjusted = old_start
     new_start_adjusted = new_start + offset
 
     # Construct the adjusted hunk header

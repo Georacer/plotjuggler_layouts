@@ -24,6 +24,11 @@ def sort_attributes(tree):
         # Sort the element's attributes
         sorted_attrib = dict(sorted(elem.attrib.items()))
         elem.attrib = sorted_attrib
+
+        # Round DockSplitter size resolution
+        if elem.tag == 'DockSplitter':
+            sizes = elem.attrib['sizes'].split(';')
+            elem.attrib['sizes'] = ';'.join([f"{float(size):.2f}" for size in sizes])
         
         # Recursively sort attributes of child elements
         for child in elem:
