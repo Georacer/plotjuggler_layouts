@@ -237,6 +237,7 @@
          <limitY />
          <curve color="#1f77b4" name="/ARSP/#0/Airspeed&#09;[m s⁻¹]" />
          <curve color="#d62728" name="/GPS/#0/Spd&#09;[m s⁻¹]" />
+         <curve color="#1ac938" name="true_airspeed" />
         </plot>
        </DockArea>
        <DockArea name="Battery health">
@@ -421,45 +422,43 @@
   </Tab>
   <Tab containers="1" tab_name="Vibration">
    <Container>
-    <DockSplitter count="1" orientation="-" sizes="1.00">
-     <DockSplitter count="4" orientation="-" sizes="0.25;0.25;0.25;0.25">
-      <DockArea name="Clipping">
-       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
-        <range bottom="0" left="0" right="100" top="100" />
-        <limitY />
-        <curve color="#1f77b4" name="/VIBE/#0/Clip" />
-        <curve color="#d62728" name="/VIBE/#1/Clip" />
-        <curve color="#1ac938" name="/VIBE/#2/Clip" />
-       </plot>
-      </DockArea>
-      <DockArea name="Vibrations X">
-       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
-        <range bottom="0" left="0" right="100" top="100" />
-        <limitY />
-        <curve color="#1f77b4" name="/VIBE/#0/VibeX&#09;[m s⁻²]" />
-        <curve color="#d62728" name="/VIBE/#1/VibeX&#09;[m s⁻²]" />
-        <curve color="#1ac938" name="/VIBE/#2/VibeX&#09;[m s⁻²]" />
-       </plot>
-      </DockArea>
-      <DockArea name="Vibrations Y">
-       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
-        <range bottom="0" left="0" right="100" top="100" />
-        <limitY />
-        <curve color="#1f77b4" name="/VIBE/#0/VibeY&#09;[m s⁻²]" />
-        <curve color="#d62728" name="/VIBE/#1/VibeY&#09;[m s⁻²]" />
-        <curve color="#1ac938" name="/VIBE/#2/VibeY&#09;[m s⁻²]" />
-       </plot>
-      </DockArea>
-      <DockArea name="Vibrations Z">
-       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
-        <range bottom="0" left="0" right="100" top="100" />
-        <limitY />
-        <curve color="#1f77b4" name="/VIBE/#0/VibeZ&#09;[m s⁻²]" />
-        <curve color="#d62728" name="/VIBE/#1/VibeZ&#09;[m s⁻²]" />
-        <curve color="#1ac938" name="/VIBE/#2/VibeZ&#09;[m s⁻²]" />
-       </plot>
-      </DockArea>
-     </DockSplitter>
+    <DockSplitter count="4" orientation="-" sizes="0.25;0.25;0.25;0.25">
+     <DockArea name="Clipping">
+      <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+       <range bottom="0" left="0" right="100" top="100" />
+       <limitY />
+       <curve color="#1f77b4" name="/VIBE/#0/Clip" />
+       <curve color="#d62728" name="/VIBE/#1/Clip" />
+       <curve color="#1ac938" name="/VIBE/#2/Clip" />
+      </plot>
+     </DockArea>
+     <DockArea name="Vibrations X">
+      <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+       <range bottom="0" left="0" right="100" top="100" />
+       <limitY />
+       <curve color="#1f77b4" name="/VIBE/#0/VibeX&#09;[m s⁻²]" />
+       <curve color="#d62728" name="/VIBE/#1/VibeX&#09;[m s⁻²]" />
+       <curve color="#1ac938" name="/VIBE/#2/VibeX&#09;[m s⁻²]" />
+      </plot>
+     </DockArea>
+     <DockArea name="Vibrations Y">
+      <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+       <range bottom="0" left="0" right="100" top="100" />
+       <limitY />
+       <curve color="#1f77b4" name="/VIBE/#0/VibeY&#09;[m s⁻²]" />
+       <curve color="#d62728" name="/VIBE/#1/VibeY&#09;[m s⁻²]" />
+       <curve color="#1ac938" name="/VIBE/#2/VibeY&#09;[m s⁻²]" />
+      </plot>
+     </DockArea>
+     <DockArea name="Vibrations Z">
+      <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+       <range bottom="0" left="0" right="100" top="100" />
+       <limitY />
+       <curve color="#1f77b4" name="/VIBE/#0/VibeZ&#09;[m s⁻²]" />
+       <curve color="#d62728" name="/VIBE/#1/VibeZ&#09;[m s⁻²]" />
+       <curve color="#1ac938" name="/VIBE/#2/VibeZ&#09;[m s⁻²]" />
+      </plot>
+     </DockArea>
     </DockSplitter>
    </Container>
   </Tab>
@@ -920,7 +919,7 @@
       </DockArea>
      </DockSplitter>
      <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
-      <DockSplitter count="2" orientation="-" sizes="0.51;0.49">
+      <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
        <DockArea name="Yaw rate performance">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -938,7 +937,7 @@
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter count="2" orientation="-" sizes="0.51;0.49">
+      <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
        <DockArea name="Yaw PID elements">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -1917,6 +1916,14 @@ return -dy/dx</function>
    <linked_source>/BAT/#1/Curr	[A]</linked_source>
    <additional_sources>
     <v1>/BAT/#1/Volt	[V]</v1>
+   </additional_sources>
+  </snippet>
+  <snippet name="true_airspeed">
+   <global />
+   <function>return value*v1</function>
+   <linked_source>/ARSP/#0/Airspeed	[m s⁻¹]</linked_source>
+   <additional_sources>
+    <v1>/CTUN/E2T</v1>
    </additional_sources>
   </snippet>
   </customMathEquations>
