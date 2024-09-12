@@ -467,18 +467,38 @@
    <Container>
     <DockSplitter count="1" orientation="-" sizes="1.00">
      <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
-      <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
        <DockArea name="Altitude">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
          <curve color="#1f77b4" name="/AHR2/Alt&#09;[m]" />
-         <curve color="#d62728" name="/BARO/#0/Alt&#09;[m]" />
-         <curve color="#1ac938" name="/BARO/#1/Alt&#09;[m]" />
          <curve color="#ff7f0e" name="/GPS/#0/Alt&#09;[m]" />
          <curve color="#b41fa4" name="/POS/Alt&#09;[m]" />
         </plot>
        </DockArea>
+       <DockArea name="Relative altitude">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/BARO/#0/Alt&#09;[m]" />
+         <curve color="#d62728" name="/BARO/#1/Alt&#09;[m]" />
+         <curve color="#1ac938" name="gps_0_relative" />
+         <curve color="#ff7f0e" name="/POS/RelOriginAlt&#09;[m]" />
+         <curve color="#f14cc1" name="/POS/RelHomeAlt&#09;[m]" />
+        </plot>
+       </DockArea>
+       <DockArea name="Ground distance">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/XKF5/#0/HAGL&#09;[m]" />
+         <curve color="#d62728" name="/XKF5/#0/rng&#09;[UNKNOWN]" />
+         <curve color="#1ac938" name="/RFND/#0/Dist&#09;[m]" />
+        </plot>
+       </DockArea>
+      </DockSplitter>
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
        <DockArea name="Vertical velocity">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -490,8 +510,28 @@
          <curve color="#f14cc1" name="baro_1_alt_deriv" />
         </plot>
        </DockArea>
+       <DockArea name="...">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+        </plot>
+       </DockArea>
+       <DockArea name="...">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+        </plot>
+       </DockArea>
       </DockSplitter>
-      <DockSplitter count="4" orientation="-" sizes="0.25;0.25;0.25;0.25">
+     </DockSplitter>
+    </DockSplitter>
+   </Container>
+  </Tab>
+  <Tab containers="1" tab_name="EKF Innovations">
+   <Container>
+    <DockSplitter count="1" orientation="-" sizes="1.00">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
        <DockArea name="EKF 0 innovation tests">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -514,26 +554,101 @@
          <curve color="#f14cc1" name="/XKF4/#1/SVT" />
         </plot>
        </DockArea>
-       <DockArea name="EKF 3 Innovation tests">
+       <DockArea name="EKF 2 innovation tests">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
-         <curve color="#1f77b4" name="/XKF4/#2/SH" />
-         <curve color="#d62728" name="/XKF4/#2/SM" />
-         <curve color="#1ac938" name="/XKF4/#2/SP" />
-         <curve color="#ff7f0e" name="/XKF4/#2/SV" />
-         <curve color="#f14cc1" name="/XKF4/#2/SVT" />
-        </plot>
-       </DockArea>
-       <DockArea name="Ground distance">
-        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
-         <range bottom="0" left="0" right="100" top="100" />
-         <limitY />
-         <curve color="#1f77b4" name="/XKF5/#0/HAGL&#09;[m]" />
-         <curve color="#d62728" name="/XKF5/#0/rng&#09;[UNKNOWN]" />
         </plot>
        </DockArea>
       </DockSplitter>
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
+       <DockArea name="...">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+        </plot>
+       </DockArea>
+       <DockArea name="...">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+        </plot>
+       </DockArea>
+       <DockArea name="...">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+        </plot>
+       </DockArea>
+      </DockSplitter>
+     </DockSplitter>
+    </DockSplitter>
+   </Container>
+  </Tab>
+  <Tab containers="1" tab_name="Yaw solution">
+   <Container>
+    <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+      <DockArea name="Yaw solutions">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="/ATT/Yaw&#09;[degheading]" />
+        <curve color="#d62728" name="/AHR2/Yaw&#09;[degheading]" />
+        <curve color="#1ac938" name="/XKF1/#0/Yaw&#09;[degheading]" />
+        <curve color="#ff7f0e" name="/XKF1/#1/Yaw&#09;[degheading]" />
+       </plot>
+      </DockArea>
+      <DockArea name="...">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+       </plot>
+      </DockArea>
+     </DockSplitter>
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+      <DockArea name="EKF 0 GSF estimates">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="/XKY0/#0/Y0&#09;[degheading]" />
+        <curve color="#d62728" name="/XKY0/#0/Y1&#09;[degheading]" />
+        <curve color="#1ac938" name="/XKY0/#0/Y2&#09;[degheading]" />
+        <curve color="#ff7f0e" name="/XKY0/#0/Y3&#09;[degheading]" />
+        <curve color="#f14cc1" name="/XKY0/#0/Y4&#09;[degheading]" />
+        <curve color="#9467bd" name="/XKY0/#0/YC&#09;[degheading]" />
+       </plot>
+      </DockArea>
+      <DockArea name="EKF yaw test ratio">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="/XKF4/#0/SM" />
+        <curve color="#d62728" name="/XKF4/#1/SM" />
+       </plot>
+      </DockArea>
+     </DockSplitter>
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+      <DockArea name="EKF 1 GSF estimates">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="/XKY0/#1/Y0&#09;[degheading]" />
+        <curve color="#d62728" name="/XKY0/#1/Y1&#09;[degheading]" />
+        <curve color="#1ac938" name="/XKY0/#1/Y2&#09;[degheading]" />
+        <curve color="#ff7f0e" name="/XKY0/#1/Y3&#09;[degheading]" />
+        <curve color="#f14cc1" name="/XKY0/#1/Y4&#09;[degheading]" />
+        <curve color="#9467bd" name="/XKY0/#1/YC&#09;[degheading]" />
+       </plot>
+      </DockArea>
+      <DockArea name="EKF GSF uncertainty">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="/XKY0/#0/YCS&#09;[deg]" />
+        <curve color="#d62728" name="/XKY0/#1/YCS&#09;[deg]" />
+       </plot>
+      </DockArea>
      </DockSplitter>
     </DockSplitter>
    </Container>
