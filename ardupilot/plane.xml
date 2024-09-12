@@ -833,7 +833,7 @@
        </DockArea>
       </DockSplitter>
       <DockSplitter count="4" orientation="-" sizes="0.25;0.25;0.25;0.25">
-       <DockArea name="...">
+       <DockArea name="Primitive outputs">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
