@@ -462,6 +462,52 @@
     </DockSplitter>
    </Container>
   </Tab>
+  <Tab containers="1" tab_name="Motor RPMs">
+   <Container>
+    <DockSplitter count="1" orientation="-" sizes="1.00">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+      <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
+       <DockArea name="...">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/ESC/#0/RPM&#09;[rpm]" />
+         <curve color="#d62728" name="/ESC/#1/RPM&#09;[rpm]" />
+         <curve color="#1ac938" name="/ESC/#2/RPM&#09;[rpm]" />
+         <curve color="#ff7f0e" name="/ESC/#3/RPM&#09;[rpm]" />
+         <curve color="#f14cc1" name="/ESC/#4/RPM&#09;[rpm]" />
+        </plot>
+       </DockArea>
+       <DockArea name="...">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/ESC/#0/RawRPM&#09;[rpm]" />
+         <curve color="#d62728" name="/ESC/#1/RawRPM&#09;[rpm]" />
+         <curve color="#1ac938" name="/ESC/#2/RawRPM&#09;[rpm]" />
+         <curve color="#ff7f0e" name="/ESC/#3/RawRPM&#09;[rpm]" />
+         <curve color="#f14cc1" name="/ESC/#4/RawRPM&#09;[rpm]" />
+        </plot>
+       </DockArea>
+      </DockSplitter>
+      <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
+       <DockArea name="...">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+        </plot>
+       </DockArea>
+       <DockArea name="...">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+        </plot>
+       </DockArea>
+      </DockSplitter>
+     </DockSplitter>
+    </DockSplitter>
+   </Container>
+  </Tab>
   <Tab containers="1" tab_name="Sensor agreement">
    <Container>
     <DockSplitter count="1" orientation="-" sizes="1.00">
