@@ -203,10 +203,11 @@
        </plot>
       </DockArea>
       <DockArea name="Mode change reason">
-       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="StepsInv">
         <range bottom="0" left="0" right="100" top="100" />
         <limitY />
         <curve color="#1f77b4" name="/MODE/Rsn" />
+        <curve color="#d62728" name="/MODE/Mode" />
        </plot>
       </DockArea>
      </DockSplitter>
