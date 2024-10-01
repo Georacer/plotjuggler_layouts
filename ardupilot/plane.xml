@@ -840,6 +840,78 @@
     </DockSplitter>
    </Container>
   </Tab>
+  <Tab containers="1" tab_name="Autotune">
+   <Container>
+    <DockSplitter count="1" orientation="-" sizes="1.00">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
+       <DockArea name="...">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/ATRP/#0/Action" />
+         <curve color="#d62728" name="/ATRP/#0/State" />
+        </plot>
+       </DockArea>
+       <DockArea name="Roll gains">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/ATRP/#0/FF" />
+         <curve color="#d62728" name="/ATRP/#0/P" />
+         <curve color="#1ac938" name="/ATRP/#0/I" />
+         <curve color="#ff7f0e" name="/ATRP/#0/D" />
+        </plot>
+       </DockArea>
+       <DockArea name="Roll FF estimation">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/AETR/Ail">
+          <transform alias="/AETR/Ail[Scale/Offset]" name="Scale/Offset">
+           <options time_offset="0.0" value_offset="0" value_scale="0.01" />
+          </transform>
+         </curve>
+         <curve color="#d62728" name="pidr_ff" />
+        </plot>
+       </DockArea>
+      </DockSplitter>
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
+       <DockArea name="...">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/ATRP/#1/Action" />
+         <curve color="#d62728" name="/ATRP/#1/State" />
+        </plot>
+       </DockArea>
+       <DockArea name="Pitch gains">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/ATRP/#1/FF" />
+         <curve color="#d62728" name="/ATRP/#1/P" />
+         <curve color="#1ac938" name="/ATRP/#1/I" />
+         <curve color="#ff7f0e" name="/ATRP/#1/Action" />
+        </plot>
+       </DockArea>
+       <DockArea name="Pitch FF estimation">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/AETR/Elev">
+          <transform alias="/AETR/Elev[Scale/Offset]" name="Scale/Offset">
+           <options time_offset="0.0" value_offset="10" value_scale="0.01" />
+          </transform>
+         </curve>
+         <curve color="#d62728" name="pidp_ff" />
+        </plot>
+       </DockArea>
+      </DockSplitter>
+     </DockSplitter>
+    </DockSplitter>
+   </Container>
+  </Tab>
   <Tab containers="1" tab_name="Rate Ctrl">
    <Container>
     <DockSplitter count="1" orientation="-" sizes="1.00">
@@ -910,6 +982,7 @@
          <curve color="#1ac938" name="/PIDP/P" />
          <curve color="#ff7f0e" name="/PIDP/I" />
          <curve color="#f14cc1" name="/PIDP/D" />
+         <curve color="#1f77b4" name="/PIDP/FF" />
         </plot>
        </DockArea>
        <DockArea name="Pitch D-gain reducer">
@@ -1947,6 +2020,22 @@ return -dy/dx</function>
    <additional_sources>
     <v1>/XKF1/#0/PE	[m]</v1>
     <v2>/XKF1/#0/PN	[m]</v2>
+   </additional_sources>
+  </snippet>
+  <snippet name="pidp_ff">
+   <global>gain = 1.5</global>
+   <function>return gain*value*v1</function>
+   <linked_source>/PIDP/Act</linked_source>
+   <additional_sources>
+    <v1>/AETR/SS</v1>
+   </additional_sources>
+  </snippet>
+  <snippet name="pidr_ff">
+   <global>gain = 1.0</global>
+   <function>return gain*value*v1</function>
+   <linked_source>/PIDR/Act</linked_source>
+   <additional_sources>
+    <v1>/AETR/SS</v1>
    </additional_sources>
   </snippet>
   <snippet name="power 0 [W]">
