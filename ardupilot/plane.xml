@@ -840,6 +840,33 @@
     </DockSplitter>
    </Container>
   </Tab>
+  <Tab containers="1" tab_name="Quicktune">
+   <Container>
+    <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
+     <DockArea name="...">
+      <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+       <range bottom="0" left="0" right="100" top="100" />
+       <limitY />
+       <curve color="#1f77b4" name="/QUIK/Param&#09;[UNKNOWN]" />
+      </plot>
+     </DockArea>
+     <DockArea name="...">
+      <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+       <range bottom="0" left="0" right="100" top="100" />
+       <limitY />
+       <curve color="#1f77b4" name="/QUIK/Gain&#09;[UNKNOWN]" />
+      </plot>
+     </DockArea>
+     <DockArea name="...">
+      <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+       <range bottom="0" left="0" right="100" top="100" />
+       <limitY />
+       <curve color="#1f77b4" name="/QUIK/SRate&#09;[UNKNOWN]" />
+      </plot>
+     </DockArea>
+    </DockSplitter>
+   </Container>
+  </Tab>
   <Tab containers="1" tab_name="Autotune">
    <Container>
     <DockSplitter count="1" orientation="-" sizes="1.00">
@@ -2020,6 +2047,14 @@ return -dy/dx</function>
    <additional_sources>
     <v1>/XKF1/#0/PE	[m]</v1>
     <v2>/XKF1/#0/PN	[m]</v2>
+   </additional_sources>
+  </snippet>
+  <snippet name="gps_0_relative">
+   <global />
+   <function>return value-v1</function>
+   <linked_source>/GPS/#0/Alt	[m]</linked_source>
+   <additional_sources>
+    <v1>/ORGN/#0/Alt	[m]</v1>
    </additional_sources>
   </snippet>
   <snippet name="pidp_ff">
