@@ -958,16 +958,16 @@
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
-         <curve color="#1f77b4" name="/PIDR/Tar" />
-         <curve color="#d62728" name="/PIDR/Act" />
+         <curve color="#1f77b4" name="/PIDR/Act" />
+         <curve color="#d62728" name="/PIDR/Tar" />
         </plot>
        </DockArea>
        <DockArea name="Pitch rate performance">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
-         <curve color="#1f77b4" name="/PIDP/Tar" />
-         <curve color="#d62728" name="/PIDP/Act" />
+         <curve color="#1f77b4" name="/PIDP/Act" />
+         <curve color="#d62728" name="/PIDP/Tar" />
         </plot>
        </DockArea>
        <DockArea name="Roll D-gain reducer">
@@ -1032,8 +1032,8 @@
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
         <limitY />
-        <curve color="#1f77b4" name="/PIQP/Act" />
-        <curve color="#d62728" name="/PIQP/Tar" />
+        <curve color="#1f77b4" name="/PIQR/Act" />
+        <curve color="#d62728" name="/PIQR/Tar" />
        </plot>
       </DockArea>
       <DockArea name="Roll PID elements">
@@ -1051,8 +1051,8 @@
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
         <limitY />
-        <curve color="#1f77b4" name="/PIQR/Act" />
-        <curve color="#d62728" name="/PIQR/Tar" />
+        <curve color="#1f77b4" name="/PIQP/Act" />
+        <curve color="#d62728" name="/PIQP/Tar" />
        </plot>
       </DockArea>
       <DockArea name="Pitch PID elements">
