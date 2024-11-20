@@ -1740,16 +1740,23 @@
     <DockSplitter count="1" orientation="-" sizes="1.00">
      <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
       <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
-       <DockArea name="...">
+       <DockArea name="Altitude">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
+         <curve color="#1f77b4" name="/XKF5/#0/HAGL&#09;[m]" />
+         <curve color="#d62728" name="/XKF5/#0/rng&#09;[UNKNOWN]" />
+         <curve color="#1ac938" name="/RFND/#0/Dist&#09;[m]" />
+         <curve color="#ff7f0e" name="/LAND/fh&#09;[UNKNOWN]" />
+         <curve color="#f14cc1" name="/LAND/altO&#09;[UNKNOWN]" />
         </plot>
        </DockArea>
-       <DockArea name="...">
+       <DockArea name="Slope">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
+         <curve color="#1f77b4" name="/LAND/slope&#09;[UNKNOWN]" />
+         <curve color="#d62728" name="/LAND/slopeInit&#09;[UNKNOWN]" />
         </plot>
        </DockArea>
        <DockArea name="...">
@@ -1760,22 +1767,30 @@
        </DockArea>
       </DockSplitter>
       <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
-       <DockArea name="...">
+       <DockArea name="Climb rate">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
+         <curve color="#1f77b4" name="/TECS/dh&#09;[m s⁻¹]" />
+         <curve color="#d62728" name="/TECS/dhdem&#09;[m s⁻¹]" />
         </plot>
        </DockArea>
-       <DockArea name="...">
+       <DockArea name="Pitch angle">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
+         <curve color="#1f77b4" name="/ATT/Pitch&#09;[deg]" />
+         <curve color="#d62728" name="/ATT/DesPitch&#09;[deg]" />
+         <curve color="#1ac938" name="/CTUN/NavPitch&#09;[deg]" />
         </plot>
        </DockArea>
-       <DockArea name="...">
+       <DockArea name="Flags">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
+         <curve color="#1f77b4" name="/LAND/stage&#09;[UNKNOWN]" />
+         <curve color="#d62728" name="/LAND/f1&#09;[UNKNOWN]" />
+         <curve color="#1ac938" name="/LAND/f2&#09;[UNKNOWN]" />
         </plot>
        </DockArea>
       </DockSplitter>
