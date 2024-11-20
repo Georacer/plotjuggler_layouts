@@ -258,7 +258,7 @@
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
+      <DockSplitter count="4" orientation="-" sizes="0.25;0.25;0.25;0.25">
        <DockArea name="Electronics voltage">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -274,6 +274,13 @@
          <curve color="#1f77b4" name="Mag 0 norm [Gauss]" />
          <curve color="#d62728" name="Mag 1 norm [Gauss]" />
          <curve color="#1ac938" name="Mag 2 norm [Gauss]" />
+        </plot>
+       </DockArea>
+       <DockArea name="Power flags">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/POWR/Flags" />
         </plot>
        </DockArea>
        <DockArea name="Battery current">
