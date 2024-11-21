@@ -1759,10 +1759,14 @@
          <curve color="#d62728" name="/LAND/slopeInit&#09;[UNKNOWN]" />
         </plot>
        </DockArea>
-       <DockArea name="...">
+       <DockArea name="Airspeed">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
+         <curve color="#1f77b4" name="/TECS/sp&#09;[m s⁻¹]" />
+         <curve color="#d62728" name="/TECS/spdem&#09;[m s⁻¹]" />
+         <curve color="#1ac938" name="/ARSP/#0/Airspeed&#09;[m s⁻¹]" />
+         <curve color="#ff7f0e" name="/GPS/#0/Spd&#09;[m s⁻¹]" />
         </plot>
        </DockArea>
       </DockSplitter>
