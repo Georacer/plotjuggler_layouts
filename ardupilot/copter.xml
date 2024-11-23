@@ -231,12 +231,10 @@
          <curve color="#bcbd22" name="/HEAT/Temp&#09;[UNKNOWN]" />
         </plot>
        </DockArea>
-       <DockArea name="Pitot calibration">
+       <DockArea name="...">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
-         <curve color="#1f77b4" name="/ARSP/#0/Airspeed&#09;[m s⁻¹]" />
-         <curve color="#d62728" name="/GPS/#0/Spd&#09;[m s⁻¹]" />
         </plot>
        </DockArea>
        <DockArea name="Battery health">
