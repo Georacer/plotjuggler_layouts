@@ -1349,11 +1349,10 @@
          <curve color="#1ac938" name="/TEC2/tmax&#09;[UNKNOWN]" />
         </plot>
        </DockArea>
-       <DockArea name="Energy rate error">
+       <DockArea name="...">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
-         <curve color="#1f77b4" name="/RCOU/C3&#09;[us]" />
         </plot>
        </DockArea>
        <DockArea name="flags">
