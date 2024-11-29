@@ -1268,6 +1268,80 @@
     </DockSplitter>
    </Container>
   </Tab>
+  <Tab containers="1" tab_name="Altitude Ctrl">
+   <Container>
+    <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+      <DockArea name="Relative altitude">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="/TECS/h&#09;[m]" />
+        <curve color="#d62728" name="/TECS/hdem&#09;[m]" />
+        <curve color="#1ac938" name="gps_0_relative" />
+        <curve color="#ff7f0e" name="/POS/RelHomeAlt&#09;[m]" />
+        <curve color="#f14cc1" name="/POS/RelOriginAlt&#09;[m]" />
+        <curve color="#9467bd" name="/TERR/CHeight&#09;[m]" />
+       </plot>
+      </DockArea>
+      <DockArea name="...">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+       </plot>
+      </DockArea>
+     </DockSplitter>
+     <DockSplitter count="3" orientation="|" sizes="0.50;0.25;0.25">
+      <DockArea name="Absolute altitude">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="/GPS/#0/Alt&#09;[m]" />
+        <curve color="#d62728" name="/POS/Alt&#09;[m]" />
+        <curve color="#1ac938" name="/TERR/TerrH&#09;[m]" />
+       </plot>
+      </DockArea>
+      <DockArea name="Current command #">
+       <plot background_colormap="ArduPlane" background_data="/MODE/Mode" flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="/MISE/CNum" />
+       </plot>
+      </DockArea>
+      <DockArea name="Command ID">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="/MISE/CId" />
+       </plot>
+      </DockArea>
+     </DockSplitter>
+     <DockSplitter count="3" orientation="|" sizes="0.50;0.25;0.25">
+      <DockArea name="Commanded altitude">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="/MISE/Alt&#09;[m]" />
+        <curve color="#d62728" name="/CMD/Alt&#09;[m]" />
+       </plot>
+      </DockArea>
+      <DockArea name="...">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+       </plot>
+      </DockArea>
+      <DockArea name="Target frame">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="/MISE/Frame" />
+       </plot>
+      </DockArea>
+     </DockSplitter>
+    </DockSplitter>
+   </Container>
+  </Tab>
   <Tab containers="1" tab_name="TECS">
    <Container>
     <DockSplitter count="1" orientation="-" sizes="1.00">
