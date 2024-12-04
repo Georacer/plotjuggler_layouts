@@ -723,36 +723,48 @@
          <curve color="#ff7f0e" name="/XKF4/#0/GPS" />
         </plot>
        </DockArea>
-       <DockArea name="...">
-        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
-         <range bottom="0" left="0" right="100" top="100" />
-         <limitY />
-        </plot>
-       </DockArea>
-      </DockSplitter>
-      <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
-       <DockArea name="EKF 0 lane and source">
+       <DockArea name="EKF lane">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
          <curve color="#1f77b4" name="/XKF4/#0/PI" />
-         <curve color="#d62728" name="/XKFS/#0/AI" />
-         <curve color="#1ac938" name="/XKFS/#0/BI" />
-         <curve color="#ff7f0e" name="/XKFS/#0/GI" />
-         <curve color="#f14cc1" name="/XKFS/#0/MI" />
-         <curve color="#9467bd" name="/XKFS/#0/SS" />
+         <curve color="#d62728" name="/XKF4/#1/PI" />
+         <curve color="#1ac938" name="/XKF4/#2/PI" />
         </plot>
        </DockArea>
-       <DockArea name="EKF 1 lane and source">
+      </DockSplitter>
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
+       <DockArea name="EKF 0 sources">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
-         <curve color="#1f77b4" name="/XKF4/#1/PI" />
-         <curve color="#d62728" name="/XKFS/#1/AI" />
-         <curve color="#1ac938" name="/XKFS/#1/BI" />
-         <curve color="#ff7f0e" name="/XKFS/#1/GI" />
-         <curve color="#f14cc1" name="/XKFS/#1/MI" />
-         <curve color="#9467bd" name="/XKFS/#1/SS" />
+         <curve color="#1f77b4" name="/XKFS/#0/AI" />
+         <curve color="#d62728" name="/XKFS/#0/BI" />
+         <curve color="#1ac938" name="/XKFS/#0/GI" />
+         <curve color="#ff7f0e" name="/XKFS/#0/MI" />
+         <curve color="#f14cc1" name="/XKFS/#0/SS" />
+        </plot>
+       </DockArea>
+       <DockArea name="EKF 1 sources">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/XKFS/#1/AI" />
+         <curve color="#d62728" name="/XKFS/#1/BI" />
+         <curve color="#1ac938" name="/XKFS/#1/GI" />
+         <curve color="#ff7f0e" name="/XKFS/#1/MI" />
+         <curve color="#f14cc1" name="/XKFS/#1/SS" />
+        </plot>
+       </DockArea>
+       <DockArea name="EKF 2 sources">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/XKFS/#2/AI" />
+         <curve color="#d62728" name="/XKFS/#2/BI" />
+         <curve color="#1ac938" name="/XKFS/#2/GI" />
+         <curve color="#ff7f0e" name="/XKFS/#2/MI" />
+         <curve color="#f14cc1" name="/XKFS/#2/SS" />
         </plot>
        </DockArea>
       </DockSplitter>
