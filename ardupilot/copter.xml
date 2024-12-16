@@ -362,6 +362,7 @@
         <range bottom="0" left="0" right="100" top="100" />
         <limitY />
         <curve color="#1f77b4" name="/GPS/#0/Status" />
+        <curve color="#d62728" name="/GPS/#1/Status" />
        </plot>
       </DockArea>
       <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
@@ -370,6 +371,7 @@
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
          <curve color="#1f77b4" name="/GPA/#0/HAcc&#09;[m]" />
+         <curve color="#d62728" name="/GPA/#1/HAcc&#09;[m]" />
         </plot>
        </DockArea>
        <DockArea name="Horizontal DoP">
@@ -377,6 +379,7 @@
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
          <curve color="#1f77b4" name="/GPS/#0/HDop" />
+         <curve color="#d62728" name="/GPS/#1/HDop" />
         </plot>
        </DockArea>
       </DockSplitter>
@@ -387,6 +390,7 @@
         <range bottom="0" left="0" right="100" top="100" />
         <limitY />
         <curve color="#1f77b4" name="/GPS/#0/NSats&#09;[satellites]" />
+        <curve color="#d62728" name="/GPS/#1/NSats&#09;[satellites]" />
        </plot>
       </DockArea>
       <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
@@ -395,6 +399,7 @@
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
          <curve color="#1f77b4" name="/GPA/#0/VAcc&#09;[m]" />
+         <curve color="#d62728" name="/GPA/#1/VAcc&#09;[m]" />
         </plot>
        </DockArea>
        <DockArea name="Vertical DoP">
@@ -402,6 +407,7 @@
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
          <curve color="#1f77b4" name="/GPA/#0/VDop" />
+         <curve color="#d62728" name="/GPA/#1/VDop" />
         </plot>
        </DockArea>
       </DockSplitter>
