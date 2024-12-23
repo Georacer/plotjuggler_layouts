@@ -1664,6 +1664,7 @@
          <limitY />
          <curve color="#1f77b4" name="/QTUN/Trn" />
          <curve color="#d62728" name="/QTUN/Ast" />
+         <curve color="#1ac938" name="/QPOS/State&#09;[UNKNOWN]" />
         </plot>
        </DockArea>
       </DockSplitter>
