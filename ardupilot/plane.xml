@@ -548,6 +548,7 @@
          <curve color="#1f77b4" name="/XKF5/#0/HAGL&#09;[m]" />
          <curve color="#d62728" name="/XKF5/#0/rng&#09;[UNKNOWN]" />
          <curve color="#1ac938" name="/RFND/#0/Dist&#09;[m]" />
+         <curve color="#ff7f0e" name="/TERR/CHeight&#09;[m]" />
         </plot>
        </DockArea>
       </DockSplitter>
