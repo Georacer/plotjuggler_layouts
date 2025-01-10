@@ -380,6 +380,8 @@
          <limitY />
          <curve color="#1f77b4" name="/GPS/#0/HDop" />
          <curve color="#d62728" name="/GPS/#1/HDop" />
+         <curve color="#1f77b4" name="/GPS/#0/HDop&#09;[m]" />
+         <curve color="#d62728" name="/GPS/#1/HDop&#09;[m]" />
         </plot>
        </DockArea>
       </DockSplitter>
@@ -408,6 +410,8 @@
          <limitY />
          <curve color="#1f77b4" name="/GPA/#0/VDop" />
          <curve color="#d62728" name="/GPA/#1/VDop" />
+         <curve color="#1f77b4" name="/GPA/#0/VDop&#09;[m]" />
+         <curve color="#d62728" name="/GPA/#1/VDop&#09;[m]" />
         </plot>
        </DockArea>
       </DockSplitter>
@@ -504,10 +508,11 @@
          <curve color="#f14cc1" name="baro_1_alt_deriv" />
         </plot>
        </DockArea>
-       <DockArea name="...">
+       <DockArea name="GPS RX agreement (m)">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
+         <curve color="#1f77b4" name="gps_rx_separation" />
         </plot>
        </DockArea>
        <DockArea name="...">
@@ -1610,6 +1615,20 @@ return -dy/dx</function>
    <linked_source>/GPS/#0/Alt	[m]</linked_source>
    <additional_sources>
     <v1>/ORGN/#0/Alt	[m]</v1>
+   </additional_sources>
+  </snippet>
+  <snippet name="gps_rx_separation">
+   <global>R = 6371000
+deg2rad = math.pi/180</global>
+   <function>delta_phi = (value - v1)*deg2rad
+delta_lambda = (v2 - v3)*deg2rad
+x1 = (1-math.cos(delta_phi) + math.cos(value)*math.cos(v1)*(1 - math.cos(delta_lambda)) )/2
+return 2*R*math.asin(math.sqrt(x1))</function>
+   <linked_source>/GPS/#0/Lat	[deglatitude]</linked_source>
+   <additional_sources>
+    <v1>/GPS/#1/Lat	[deglatitude]</v1>
+    <v2>/GPS/#0/Lng	[deglongitude]</v2>
+    <v3>/GPS/#1/Lng	[deglongitude]</v3>
    </additional_sources>
   </snippet>
   <snippet name="power 0 [W]">
