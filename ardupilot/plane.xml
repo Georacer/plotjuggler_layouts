@@ -528,6 +528,7 @@
          <curve color="#1f77b4" name="/AHR2/Alt&#09;[m]" />
          <curve color="#ff7f0e" name="/GPS/#0/Alt&#09;[m]" />
          <curve color="#b41fa4" name="/POS/Alt&#09;[m]" />
+         <curve color="#ff7f0e" name="/TERR/TerrH&#09;[m]" />
         </plot>
        </DockArea>
        <DockArea name="Relative altitude">
