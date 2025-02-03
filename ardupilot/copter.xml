@@ -1161,6 +1161,93 @@
     </DockSplitter>
    </Container>
   </Tab>
+  <Tab containers="1" tab_name="ICEngine">
+   <Container>
+    <DockSplitter count="1" orientation="-" sizes="1.00">
+     <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+      <DockSplitter count="4" orientation="-" sizes="0.25;0.25;0.25;0.25">
+       <DockArea name="Temperatures">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/EFI/ECT&#09;[degC]" />
+         <curve color="#d62728" name="/EFI/IMT&#09;[degC]" />
+         <curve color="#1ac938" name="/EFI/OilT&#09;[degC]" />
+         <curve color="#ff7f0e" name="/ECYL/#0/CHT&#09;[degC]" />
+         <curve color="#f14cc1" name="/ECYL/#0/CHT2&#09;[degC]" />
+         <curve color="#9467bd" name="/ECYL/#0/EGT&#09;[degC]" />
+        </plot>
+       </DockArea>
+       <DockArea name="Pressures">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/EFI/ATM&#09;[Pa]" />
+         <curve color="#d62728" name="/EFI/FP&#09;[Pa]" />
+         <curve color="#1ac938" name="/EFI/IMP&#09;[Pa]" />
+         <curve color="#ff7f0e" name="/EFI/OilP&#09;[Pa]" />
+        </plot>
+       </DockArea>
+       <DockArea name="Engine load">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/EFI/LP&#09;[%]" />
+         <curve color="#d62728" name="/EFI/TPS&#09;[%]" />
+        </plot>
+       </DockArea>
+       <DockArea name="Engine speed">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/EFI/Rpm&#09;[rpm]" />
+         <curve color="#d62728" name="/RPM/rpm1&#09;[rpm]" />
+         <curve color="#1ac938" name="/RPM/rpm2&#09;[rpm]" />
+        </plot>
+       </DockArea>
+      </DockSplitter>
+      <DockSplitter count="4" orientation="-" sizes="0.25;0.25;0.25;0.25">
+       <DockArea name="Fuel consumption rate">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/EFI/FCR" />
+        </plot>
+       </DockArea>
+       <DockArea name="Overall fuel consumption">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/EFI/CFV" />
+        </plot>
+       </DockArea>
+       <DockArea name="Status flags">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/EFI2/CSE" />
+         <curve color="#d62728" name="/EFI2/DS" />
+         <curve color="#1ac938" name="/EFI2/DebS" />
+         <curve color="#ff7f0e" name="/EFI2/ES" />
+         <curve color="#f14cc1" name="/EFI2/FPS" />
+         <curve color="#9467bd" name="/EFI2/GE" />
+         <curve color="#17becf" name="/EFI2/MS" />
+         <curve color="#bcbd22" name="/EFI2/OPS" />
+         <curve color="#1f77b4" name="/EFI2/SPU" />
+         <curve color="#d62728" name="/EFI2/TS" />
+        </plot>
+       </DockArea>
+       <DockArea name="...">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+        </plot>
+       </DockArea>
+      </DockSplitter>
+     </DockSplitter>
+    </DockSplitter>
+   </Container>
+  </Tab>
   <Tab containers="1" tab_name="Power">
    <Container>
     <DockSplitter count="1" orientation="-" sizes="1.00">
