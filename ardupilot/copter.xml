@@ -1530,6 +1530,31 @@
     </DockSplitter>
    </Container>
   </Tab>
+  <Tab containers="1" tab_name="Filtering">
+   <Container>
+    <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
+     <DockArea name="FFT tracking">
+      <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+       <range bottom="0" left="0" right="100" top="100" />
+       <limitY />
+       <curve color="#1f77b4" name="/FTN1/PkAvg&#09;[Hz]" />
+       <curve color="#d62728" name="/FTN2/#0/PkY&#09;[Hz]" />
+       <curve color="#1ac938" name="/FTN2/#1/PkY&#09;[Hz]" />
+       <curve color="#ff7f0e" name="/FTN2/#2/PkY&#09;[Hz]" />
+      </plot>
+     </DockArea>
+     <DockArea name="Filter frequency">
+      <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+       <range bottom="0" left="0" right="100" top="100" />
+       <limitY />
+       <curve color="#1f77b4" name="/FTN1/PkAvg&#09;[Hz]" />
+       <curve color="#d62728" name="/FTNS/#0/NF&#09;[Hz]" />
+       <curve color="#1ac938" name="/FTNS/#1/NF&#09;[Hz]" />
+      </plot>
+     </DockArea>
+    </DockSplitter>
+   </Container>
+  </Tab>
   <currentTabIndex index="0" />
  </tabbed_widget>
  <use_relative_time_offset enabled="1" />
