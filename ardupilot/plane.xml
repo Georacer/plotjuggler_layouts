@@ -239,6 +239,12 @@
          <curve color="#1f77b4" name="/ARSP/#0/Airspeed&#09;[m s⁻¹]" />
          <curve color="#d62728" name="/GPS/#0/Spd&#09;[m s⁻¹]" />
          <curve color="#1ac938" name="true_airspeed" />
+         <curve color="#1f77b4" name="/GPS/#0/Spd&#09;[m s⁻¹]" />
+         <curve color="#d62728" name="/GPS/#1/Spd&#09;[m s⁻¹]" />
+         <curve color="#1ac938" name="/ARSP/#0/Airspeed&#09;[m s⁻¹]" />
+         <curve color="#ff7f0e" name="/ARSP/#1/Airspeed&#09;[m s⁻¹]" />
+         <curve color="#f14cc1" name="/CTUN/As&#09;[m s⁻¹]" />
+         <curve color="#9467bd" name="true_airspeed" />
         </plot>
        </DockArea>
        <DockArea name="Battery health">
@@ -1372,7 +1378,6 @@
          <limitY />
          <curve color="#1f77b4" name="/TECS/sp&#09;[m s⁻¹]" />
          <curve color="#d62728" name="/TECS/spdem&#09;[m s⁻¹]" />
-         <curve color="#1ac938" name="/ARSP/#0/Airspeed&#09;[m s⁻¹]" />
         </plot>
        </DockArea>
        <DockArea name="Altitude">
