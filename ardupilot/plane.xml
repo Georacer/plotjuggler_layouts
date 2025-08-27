@@ -1430,14 +1430,6 @@
          <curve color="#d62728" name="/TECS/dhdem&#09;[m s⁻¹]" />
         </plot>
        </DockArea>
-       <DockArea name="...">
-        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
-         <range bottom="0" left="0" right="100" top="100" />
-         <limitY />
-        </plot>
-       </DockArea>
-      </DockSplitter>
-      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
        <DockArea name="Throttle">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
@@ -1447,10 +1439,21 @@
          <curve color="#1ac938" name="/TEC2/tmax&#09;[UNKNOWN]" />
         </plot>
        </DockArea>
-       <DockArea name="...">
+      </DockSplitter>
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
+       <DockArea name="Control weights">
         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
+         <curve color="#1f77b4" name="/TEC2/KEW&#09;[UNKNOWN]" />
+         <curve color="#d62728" name="/TEC2/PEW&#09;[UNKNOWN]" />
+        </plot>
+       </DockArea>
+       <DockArea name="Flight stage">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/STAT/Stage" />
         </plot>
        </DockArea>
        <DockArea name="flags">
@@ -1467,81 +1470,197 @@
   </Tab>
   <Tab containers="1" tab_name="TECS 2">
    <Container>
-    <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
-     <DockSplitter count="3" orientation="|" sizes="0.33;0.33;0.33">
-      <DockArea name="...">
+    <DockSplitter count="2" orientation="|" sizes="0.34;0.66">
+     <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
+      <DockArea name="Throttle demand sources">
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
         <limitY />
+        <curve color="#1f77b4" name="/TEC3/FFT&#09;[UNKNOWN]" />
+        <curve color="#d62728" name="/TEC3/I&#09;[UNKNOWN]" />
+        <curve color="#1ac938" name="/TEC3/Imax&#09;[UNKNOWN]" />
+        <curve color="#ff7f0e" name="/TEC3/Imin&#09;[UNKNOWN]" />
+        <curve color="#f14cc1" name="/TEC3/TEE&#09;[UNKNOWN]">
+         <transform alias="/TEC3/TEE&#09;[UNKNOWN][Scale/Offset]" name="Scale/Offset">
+          <options time_offset="0.0" value_offset="0.0" value_scale="0.002" />
+         </transform>
+        </curve>
+        <curve color="#9467bd" name="/TEC3/TEDE&#09;[UNKNOWN]">
+         <transform alias="/TEC3/TEDE&#09;[UNKNOWN][Scale/Offset]" name="Scale/Offset">
+          <options time_offset="0.0" value_offset="0.0" value_scale="0.001" />
+         </transform>
+        </curve>
        </plot>
       </DockArea>
-      <DockArea name="Energy error">
+      <DockArea name="Throttle reconstruction">
        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
         <range bottom="0" left="0" right="100" top="100" />
         <limitY />
-        <curve color="#1f77b4" name="/TEC3/TEE&#09;[UNKNOWN]" />
-        <curve color="#d62728" name="/TEC3/Emax&#09;[UNKNOWN]" />
-        <curve color="#1ac938" name="/TEC3/Emin&#09;[UNKNOWN]" />
-       </plot>
-      </DockArea>
-      <DockArea name="Energy balance">
-       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
-        <range bottom="0" left="0" right="100" top="100" />
-        <limitY />
-        <curve color="#1f77b4" name="/TEC2/EBE&#09;[UNKNOWN]" />
-        <curve color="#d62728" name="/TEC2/EBD&#09;[UNKNOWN]" />
-       </plot>
-      </DockArea>
-     </DockSplitter>
-     <DockSplitter count="3" orientation="|" sizes="0.33;0.34;0.33">
-      <DockArea name="...">
-       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
-        <range bottom="0" left="0" right="100" top="100" />
-        <limitY />
-       </plot>
-      </DockArea>
-      <DockArea name="Energy rate error">
-       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
-        <range bottom="0" left="0" right="100" top="100" />
-        <limitY />
-        <curve color="#1f77b4" name="/TEC3/TEDE&#09;[UNKNOWN]" />
-       </plot>
-      </DockArea>
-      <DockArea name="Energy balance rate">
-       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
-        <range bottom="0" left="0" right="100" top="100" />
-        <limitY />
-        <curve color="#1f77b4" name="/TEC2/EBDE&#09;[UNKNOWN]" />
-        <curve color="#d62728" name="/TEC2/EBDD&#09;[UNKNOWN]" />
-        <curve color="#1ac938" name="/TEC2/I&#09;[UNKNOWN]" />
+        <curve color="#1f77b4" name="/TECS/th" />
+        <curve color="#d62728" name="tecs_throttle_reconstruction" />
        </plot>
       </DockArea>
      </DockSplitter>
-     <DockSplitter count="3" orientation="|" sizes="0.33;0.34;0.33">
-      <DockArea name="Pitch demand sources">
-       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
-        <range bottom="0" left="0" right="100" top="100" />
-        <limitY />
-        <curve color="#1f77b4" name="/TEC2/EBDDT&#09;[UNKNOWN]" />
-        <curve color="#d62728" name="/TEC2/I&#09;[UNKNOWN]" />
-        <curve color="#1ac938" name="/TEC2/KI&#09;[UNKNOWN]" />
-       </plot>
-      </DockArea>
-      <DockArea name="Control weights">
-       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
-        <range bottom="0" left="0" right="100" top="100" />
-        <limitY />
-        <curve color="#1f77b4" name="/TEC2/KEW&#09;[UNKNOWN]" />
-        <curve color="#d62728" name="/TEC2/PEW&#09;[UNKNOWN]" />
-       </plot>
-      </DockArea>
-      <DockArea name="Flight stage">
-       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
-        <range bottom="0" left="0" right="100" top="100" />
-        <limitY />
-        <curve color="#1f77b4" name="/STAT/Stage" />
-       </plot>
-      </DockArea>
+     <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
+      <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+       <DockArea name="Pitch demand sources">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/TEC2/EBDDT&#09;[UNKNOWN]" />
+         <curve color="#d62728" name="/TEC2/I&#09;[UNKNOWN]" />
+         <curve color="#1ac938" name="/TEC2/KI&#09;[UNKNOWN]" />
+        </plot>
+       </DockArea>
+       <DockArea name="SEB demand sources">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/TEC2/EBDD&#09;[UNKNOWN]" />
+         <curve color="#d62728" name="tecs_specific_energy_balance_rate_error">
+          <transform alias="tecs_specific_energy_balance_rate_error[Scale/Offset]" name="Scale/Offset">
+           <options time_offset="0.0" value_offset="0.0" value_scale="0.3" />
+          </transform>
+         </curve>
+        </plot>
+       </DockArea>
+      </DockSplitter>
+      <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+       <DockArea name="Pitch reconstruction">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/TECS/ph">
+          <transform alias="/TECS/ph[Scale/Offset]" name="Scale/Offset">
+           <options time_offset="0.0" value_offset="0.0" value_scale="57.296" />
+          </transform>
+         </curve>
+         <curve color="#d62728" name="tecs_pitch_reconstruction">
+          <transform alias="tecs_pitch_reconstruction[Scale/Offset]" name="Scale/Offset">
+           <options time_offset="0.0" value_offset="0.0" value_scale="57.296" />
+          </transform>
+         </curve>
+        </plot>
+       </DockArea>
+       <DockArea name="SEB demand reconstruction">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/TEC2/EBDDT&#09;[UNKNOWN]" />
+         <curve color="#d62728" name="tecs_seb_dem_total_reconstruction" />
+        </plot>
+       </DockArea>
+      </DockSplitter>
+     </DockSplitter>
+    </DockSplitter>
+   </Container>
+  </Tab>
+  <Tab containers="1" tab_name="TECS3">
+   <Container>
+    <DockSplitter count="1" orientation="-" sizes="1.00">
+     <DockSplitter count="3" orientation="|" sizes="0.24;0.51;0.25">
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
+       <DockArea name="Potential energy">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/TEC4/P&#09;[UNKNOWN]" />
+         <curve color="#d62728" name="/TEC4/Pdem&#09;[UNKNOWN]" />
+        </plot>
+       </DockArea>
+       <DockArea name="Kinetic energy">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/TEC4/K&#09;[UNKNOWN]" />
+         <curve color="#d62728" name="/TEC4/Kdem&#09;[UNKNOWN]" />
+        </plot>
+       </DockArea>
+       <DockArea name="Energy error">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/TEC3/TEE&#09;[UNKNOWN]" />
+         <curve color="#d62728" name="/TEC3/Emax&#09;[UNKNOWN]" />
+         <curve color="#1ac938" name="/TEC3/Emin&#09;[UNKNOWN]" />
+        </plot>
+       </DockArea>
+      </DockSplitter>
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
+       <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+        <DockArea name="Potential energy rate">
+         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+          <range bottom="0" left="0" right="100" top="100" />
+          <limitY />
+          <curve color="#1f77b4" name="/TEC3/PED&#09;[UNKNOWN]" />
+          <curve color="#d62728" name="/TEC3/PEDD&#09;[UNKNOWN]" />
+         </plot>
+        </DockArea>
+        <DockArea name="Energy balance">
+         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+          <range bottom="0" left="0" right="100" top="100" />
+          <limitY />
+          <curve color="#1f77b4" name="/TEC2/EBE&#09;[UNKNOWN]" />
+          <curve color="#d62728" name="/TEC2/EBD&#09;[UNKNOWN]" />
+         </plot>
+        </DockArea>
+       </DockSplitter>
+       <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+        <DockArea name="Kinetic energy rate">
+         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+          <range bottom="0" left="0" right="100" top="100" />
+          <limitY />
+          <curve color="#1f77b4" name="/TEC3/KED&#09;[UNKNOWN]" />
+          <curve color="#d62728" name="/TEC3/KEDD&#09;[UNKNOWN]" />
+         </plot>
+        </DockArea>
+        <DockArea name="...">
+         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+          <range bottom="0" left="0" right="100" top="100" />
+          <limitY />
+         </plot>
+        </DockArea>
+       </DockSplitter>
+       <DockSplitter count="2" orientation="|" sizes="0.50;0.50">
+        <DockArea name="Energy rate error">
+         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+          <range bottom="0" left="0" right="100" top="100" />
+          <limitY />
+          <curve color="#1f77b4" name="/TEC3/TEDE&#09;[UNKNOWN]" />
+         </plot>
+        </DockArea>
+        <DockArea name="Energy balance error">
+         <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+          <range bottom="0" left="0" right="100" top="100" />
+          <limitY />
+          <curve color="#1f77b4" name="tecs_specific_energy_balance_error" />
+         </plot>
+        </DockArea>
+       </DockSplitter>
+      </DockSplitter>
+      <DockSplitter count="3" orientation="-" sizes="0.33;0.33;0.33">
+       <DockArea name="Energy balance rate">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="/TEC2/EBDE&#09;[UNKNOWN]" />
+         <curve color="#d62728" name="/TEC2/EBDD&#09;[UNKNOWN]" />
+        </plot>
+       </DockArea>
+       <DockArea name="...">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+        </plot>
+       </DockArea>
+       <DockArea name="Energy balance rate error">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range bottom="0" left="0" right="100" top="100" />
+         <limitY />
+         <curve color="#1f77b4" name="tecs_specific_energy_balance_rate_error" />
+        </plot>
+       </DockArea>
+      </DockSplitter>
      </DockSplitter>
     </DockSplitter>
    </Container>
@@ -1680,7 +1799,7 @@
         </plot>
        </DockArea>
        <DockArea name="Flight Mode">
-        <plot flip_x="false" mode="TimeSeries" style="StepsInv" flip_y="false">
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="StepsInv">
          <range bottom="0" left="0" right="100" top="100" />
          <limitY />
          <curve color="#1f77b4" name="/MODE/Mode" />
@@ -2229,6 +2348,71 @@ return -dy/dx</function>
    <linked_source>/BAT/#1/Curr	[A]</linked_source>
    <additional_sources>
     <v1>/BAT/#1/Volt	[V]</v1>
+   </additional_sources>
+  </snippet>
+ <snippet name="tecs_pitch_reconstruction">
+   <global>g = 9.81</global>
+   <function>gainInv = v3 * g
+return (value + v1 + v2) / gainInv</function>
+   <linked_source>/TEC2/I	[UNKNOWN]</linked_source>
+   <additional_sources>
+    <v1>/TEC2/KI	[UNKNOWN]</v1>
+    <v2>/TEC2/EBDDT	[UNKNOWN]</v2>
+    <v3>/TECS/sp	[m s⁻¹]</v3>
+   </additional_sources>
+  </snippet>
+  <snippet name="tecs_seb_dem_total_reconstruction">
+   <global>TECS_PTCH_DAMP = 0.3</global>
+   <function>return value + v1*TECS_PTCH_DAMP</function>
+   <linked_source>/TEC2/EBDD	[UNKNOWN]</linked_source>
+   <additional_sources>
+    <v1>tecs_specific_energy_balance_rate_error</v1>
+   </additional_sources>
+  </snippet>
+  <snippet name="tecs_specific_energy_balance_error">
+   <global />
+   <function>return value-v1</function>
+   <linked_source>/TEC2/EBD	[UNKNOWN]</linked_source>
+   <additional_sources>
+    <v1>/TEC2/EBE	[UNKNOWN]</v1>
+   </additional_sources>
+  </snippet>
+  <snippet name="tecs_specific_energy_balance_rate_error">
+   <global />
+   <function>return value-v1</function>
+   <linked_source>/TEC2/EBDD	[UNKNOWN]</linked_source>
+   <additional_sources>
+    <v1>/TEC2/EBDE	[UNKNOWN]</v1>
+   </additional_sources>
+  </snippet>
+  <snippet name="tecs_specific_energy_rate_demand">
+   <global />
+   <function>return value+v1</function>
+   <linked_source>/TEC3/KEDD	[UNKNOWN]</linked_source>
+   <additional_sources>
+    <v1>/TEC3/PEDD	[UNKNOWN]</v1>
+   </additional_sources>
+  </snippet>
+  <snippet name="tecs_throttle_reconstruction">
+   <global>TECS_THR_DAMP = 0.5
+TECS_CLMB_MAX = 5
+TECS_SINK_MAX = 5
+TECS_TIME_CONST = 5
+THR_MAX = 1
+THR_MIN = 0
+g = 9.81</global>
+   <function>Thr2STE = (TECS_CLMB_MAX + TECS_SINK_MAX)*g / (THR_MAX - THR_MIN)
+K_STE2Thr = 1 / Thr2STE / TECS_TIME_CONST
+energy_error = K_STE2Thr * v2
+energy_rate_error = K_STE2Thr * TECS_THR_DAMP * v3
+
+return energy_error + energy_rate_error + value + v1
+</function>
+   <linked_source>/TEC3/FFT	[UNKNOWN]</linked_source>
+   <additional_sources>
+    <v1>/TEC3/I	[UNKNOWN]</v1>
+    <v2>/TEC3/TEE	[UNKNOWN]</v2>
+    <v3>/TEC3/TEDE	[UNKNOWN]</v3>
    </additional_sources>
   </snippet>
   <snippet name="true_airspeed">
