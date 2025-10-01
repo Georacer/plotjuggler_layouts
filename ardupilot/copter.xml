@@ -657,6 +657,112 @@
     </DockSplitter>
    </Container>
   </Tab>
+  <Tab containers="1" tab_name="EKF solution status">
+   <Container>
+    <DockSplitter count="4" orientation="-" sizes="0.25;0.25;0.25;0.25">
+     <DockSplitter count="3" orientation="|" sizes="0.33;0.33;0.33">
+      <DockArea name="Attitude">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="XKF0_attitude_ok_0" />
+       </plot>
+      </DockArea>
+      <DockArea name="Velocity">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="XKF0_vel_hor_ok_1" />
+        <curve color="#d62728" name="XKF0_vel_vert_ok_2" />
+       </plot>
+      </DockArea>
+      <DockArea name="Position">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="XKF0_pos_rel_hor_ok_3" />
+        <curve color="#d62728" name="XKF0_pos_hor_abs_ok_4" />
+        <curve color="#1ac938" name="XKF0_pos_vert_ok_5" />
+        <curve color="#ff7f0e" name="XKF0_pos_hor_rel_pred_ok_8" />
+        <curve color="#f14cc1" name="XKF0_pos_hor_abs_pred_ok_9" />
+       </plot>
+      </DockArea>
+     </DockSplitter>
+     <DockSplitter count="3" orientation="|" sizes="0.33;0.33;0.33">
+      <DockArea name="GNSS">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="XKF0_gps_used_13" />
+        <curve color="#d62728" name="XKF0_gps_quality_ok_15" />
+       </plot>
+      </DockArea>
+      <DockArea name="GNSS glitch">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="XKF0_gps_glitch_14" />
+       </plot>
+      </DockArea>
+      <DockArea name="Terrain altitude">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="XKF0_terrain_alt_ok_6" />
+       </plot>
+      </DockArea>
+     </DockSplitter>
+     <DockSplitter count="3" orientation="|" sizes="0.33;0.33;0.33">
+      <DockArea name="Dead reckoning">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="XKF0_dead_reck_18" />
+       </plot>
+      </DockArea>
+      <DockArea name="Filter initialization">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="XKF0_init_ok_16" />
+       </plot>
+      </DockArea>
+      <DockArea name="Constant-position operation">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="XKF0_const_pos_ok_7" />
+       </plot>
+      </DockArea>
+     </DockSplitter>
+     <DockSplitter count="3" orientation="|" sizes="0.33;0.33;0.33">
+      <DockArea name="Baro compensation">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="XKF0_baro_comp_tkoff_11" />
+        <curve color="#d62728" name="XKF0_baro_comp_land_12" />
+       </plot>
+      </DockArea>
+      <DockArea name="Airspeed rejection">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="XKF0_arsp_rej_17" />
+       </plot>
+      </DockArea>
+      <DockArea name="Optical flow takeoff">
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range bottom="0" left="0" right="100" top="100" />
+        <limitY />
+        <curve color="#1f77b4" name="XKF0_oflow_tkoff_10" />
+       </plot>
+      </DockArea>
+     </DockSplitter>
+    </DockSplitter>
+   </Container>
+  </Tab>
+
   <Tab containers="1" tab_name="EKF lanes">
    <Container>
     <DockSplitter count="1" orientation="-" sizes="1.00">
@@ -1646,6 +1752,102 @@ return v1*n/value</function>
     <v1>power 0 [W]</v1>
    </additional_sources>
   </snippet>
+  <snippet name="XKF0_arsp_rej_17">
+   <global />
+   <function>return ((value &amp; (1 &lt;&lt; 17)) ~= 0 and 1 or 0)</function>
+   <linked_source>/XKF4/#0/SS</linked_source>
+  </snippet>
+  <snippet name="XKF0_attitude_ok_0">
+   <global />
+   <function>return ((value &amp; (1 &lt;&lt; 0)) ~= 0 and 1 or 0)</function>
+   <linked_source>/XKF4/#0/SS</linked_source>
+  </snippet>
+  <snippet name="XKF0_baro_comp_land_12">
+   <global />
+   <function>return ((value &amp; (1 &lt;&lt; 12)) ~= 0 and 1 or 0)</function>
+   <linked_source>/XKF4/#0/SS</linked_source>
+  </snippet>
+  <snippet name="XKF0_baro_comp_tkoff_11">
+   <global />
+   <function>return ((value &amp; (1 &lt;&lt; 11)) ~= 0 and 1 or 0)</function>
+   <linked_source>/XKF4/#0/SS</linked_source>
+  </snippet>
+  <snippet name="XKF0_const_pos_ok_7">
+   <global />
+   <function>return ((value &amp; (1 &lt;&lt; 7)) ~= 0 and 1 or 0)</function>
+   <linked_source>/XKF4/#0/SS</linked_source>
+  </snippet>
+  <snippet name="XKF0_dead_reck_18">
+   <global />
+   <function>return ((value &amp; (1 &lt;&lt; 18)) ~= 0 and 1 or 0)</function>
+   <linked_source>/XKF4/#0/SS</linked_source>
+  </snippet>
+  <snippet name="XKF0_gps_glitch_14">
+   <global />
+   <function>return ((value &amp; (1 &lt;&lt; 14)) ~= 0 and 1 or 0)</function>
+   <linked_source>/XKF4/#0/SS</linked_source>
+  </snippet>
+  <snippet name="XKF0_gps_quality_ok_15">
+   <global />
+   <function>return ((value &amp; (1 &lt;&lt; 15)) ~= 0 and 1 or 0)</function>
+   <linked_source>/XKF4/#0/SS</linked_source>
+  </snippet>
+  <snippet name="XKF0_gps_used_13">
+   <global />
+   <function>return ((value &amp; (1 &lt;&lt; 13)) ~= 0 and 1 or 0)</function>
+   <linked_source>/XKF4/#0/SS</linked_source>
+  </snippet>
+  <snippet name="XKF0_init_ok_16">
+   <global />
+   <function>return ((value &amp; (1 &lt;&lt; 16)) ~= 0 and 1 or 0)</function>
+   <linked_source>/XKF4/#0/SS</linked_source>
+  </snippet>
+  <snippet name="XKF0_oflow_tkoff_10">
+   <global />
+   <function>return ((value &amp; (1 &lt;&lt; 10)) ~= 0 and 1 or 0)</function>
+   <linked_source>/XKF4/#0/SS</linked_source>
+  </snippet>
+  <snippet name="XKF0_pos_hor_abs_ok_4">
+   <global />
+   <function>return ((value &amp; (1 &lt;&lt; 4)) ~= 0 and 1 or 0)</function>
+   <linked_source>/XKF4/#0/SS</linked_source>
+  </snippet>
+  <snippet name="XKF0_pos_hor_abs_pred_ok_9">
+   <global />
+   <function>return ((value &amp; (1 &lt;&lt; 9)) ~= 0 and 1 or 0)</function>
+   <linked_source>/XKF4/#0/SS</linked_source>
+  </snippet>
+  <snippet name="XKF0_pos_hor_rel_pred_ok_8">
+   <global />
+   <function>return ((value &amp; (1 &lt;&lt; 8)) ~= 0 and 1 or 0)</function>
+   <linked_source>/XKF4/#0/SS</linked_source>
+  </snippet>
+  <snippet name="XKF0_pos_rel_hor_ok_3">
+   <global />
+   <function>return ((value &amp; (1 &lt;&lt; 3)) ~= 0 and 1 or 0)</function>
+   <linked_source>/XKF4/#0/SS</linked_source>
+  </snippet>
+  <snippet name="XKF0_pos_vert_ok_5">
+   <global />
+   <function>return ((value &amp; (1 &lt;&lt; 5)) ~= 0 and 1 or 0)</function>
+   <linked_source>/XKF4/#0/SS</linked_source>
+  </snippet>
+  <snippet name="XKF0_terrain_alt_ok_6">
+   <global />
+   <function>return ((value &amp; (1 &lt;&lt; 6)) ~= 0 and 1 or 0)</function>
+   <linked_source>/XKF4/#0/SS</linked_source>
+  </snippet>
+  <snippet name="XKF0_vel_hor_ok_1">
+   <global />
+   <function>return ((value &amp; (1 &lt;&lt; 1)) ~= 0 and 1 or 0)</function>
+   <linked_source>/XKF4/#0/SS</linked_source>
+  </snippet>
+  <snippet name="XKF0_vel_vert_ok_2">
+   <global />
+   <function>return ((value &amp; (1 &lt;&lt; 2)) ~= 0 and 1 or 0)</function>
+   <linked_source>/XKF4/#0/SS</linked_source>
+  </snippet>
+
   <snippet name="baro_0_alt_deriv">
    <global>firstX = 0
 firstY = 0
