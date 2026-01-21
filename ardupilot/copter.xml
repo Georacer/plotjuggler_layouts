@@ -1661,6 +1661,28 @@
     </DockSplitter>
    </Container>
   </Tab>
+  <Tab containers="1" tab_name="Toilet Bowling">
+   <Container>
+    <DockSplitter count="2" orientation="-" sizes="0.50;0.50">
+     <DockArea name="Roll">
+      <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+       <range bottom="0" left="0" right="100" top="100" />
+       <limitY />
+       <curve color="#1f77b4" name="/ATT/Roll&#09;[deg]" />
+       <curve color="#d62728" name="Roll estimate" />
+      </plot>
+     </DockArea>
+     <DockArea name="Pitch">
+      <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+       <range bottom="0" left="0" right="100" top="100" />
+       <limitY />
+       <curve color="#1f77b4" name="/ATT/Pitch&#09;[deg]" />
+       <curve color="#d62728" name="Pitch estimate" />
+      </plot>
+     </DockArea>
+    </DockSplitter>
+   </Container>
+  </Tab>
   <currentTabIndex index="0" />
  </tabbed_widget>
  <use_relative_time_offset enabled="1" />
@@ -1706,7 +1728,7 @@ return thr*k</function>
     <v7>/RCOU/C8	[us]</v7>
    </additional_sources>
   </snippet>
- <snippet name="Mag 0 norm [Gauss]">
+  <snippet name="Mag 0 norm [Gauss]">
    <global />
    <function>return math.sqrt(value*value + v1*v1 + v2*v2)</function>
    <linked_source>/MAG/#0/MagX	[Gauss]</linked_source>
@@ -1733,12 +1755,108 @@ return thr*k</function>
     <v2>/MAG/#2/MagZ	[Gauss]</v2>
    </additional_sources>
   </snippet>
+  <snippet name="Pitch estimate">
+   <global>DEG2RAD = math.pi/180
+g = 9.81
+
+firstX = 0
+firstY = 0
+is_first = true
+secondX = 0
+secondY = 0
+is_second = false
+</global>
+   <function>-- Rotate velocity to body frame.
+Vbn_roll = -math.cos((v2)*DEG2RAD) * value
+Vbe_roll = math.cos((90-v2)*DEG2RAD) * v1
+total = Vbn_roll + Vbe_roll
+
+-- Wait for initial values
+if (is_first) then
+  is_first = false
+  is_second = true
+  firstX = time
+  firstY = total
+end
+
+if (is_second) then
+  is_second = false
+  secondX = time
+  secondY = total
+end
+
+-- Central derivative: dy/dx ~= f(x+delta_x)-f(x-delta_x)/(2*delta_x)
+dx = time - firstX
+dy = total - firstY
+-- Increment
+firstX = secondX
+firstY = secondY
+secondX = time
+secondY = total
+
+accel = dy/dx
+
+return math.atan(accel/g)/DEG2RAD</function>
+   <linked_source>/PSCN/VN	[m s⁻¹]</linked_source>
+   <additional_sources>
+    <v1>/PSCE/VE	[m s⁻¹]</v1>
+    <v2>/ATT/Yaw	[degheading]</v2>
+   </additional_sources>
+  </snippet>
   <snippet name="RXRSSI resampled by XKF">
    <global />
    <function>return v1</function>
    <linked_source>/XKF1/#0/PN	[m]</linked_source>
    <additional_sources>
     <v1>/RSSI/RXRSSI</v1>
+   </additional_sources>
+  </snippet>
+ <snippet name="Roll estimate">
+   <global>DEG2RAD = math.pi/180
+g = 9.81
+
+firstX = 0
+firstY = 0
+is_first = true
+secondX = 0
+secondY = 0
+is_second = false
+</global>
+   <function>-- Rotate velocity to body frame.
+Vbn_roll = -math.cos((90-v2)*DEG2RAD) * value
+Vbe_roll = math.cos((v2)*DEG2RAD) * v1
+total = Vbn_roll + Vbe_roll
+
+-- Wait for initial values
+if (is_first) then
+  is_first = false
+  is_second = true
+  firstX = time
+  firstY = total
+end
+
+if (is_second) then
+  is_second = false
+  secondX = time
+  secondY = total
+end
+
+-- Central derivative: dy/dx ~= f(x+delta_x)-f(x-delta_x)/(2*delta_x)
+dx = time - firstX
+dy = total - firstY
+-- Increment
+firstX = secondX
+firstY = secondY
+secondX = time
+secondY = total
+
+accel = dy/dx
+
+return math.atan(accel/g)/DEG2RAD</function>
+   <linked_source>/PSCN/VN	[m s⁻¹]</linked_source>
+   <additional_sources>
+    <v1>/PSCE/VE	[m s⁻¹]</v1>
+    <v2>/ATT/Yaw	[degheading]</v2>
    </additional_sources>
   </snippet>
   <snippet name="Thrust estimate [N]">
